@@ -27,7 +27,7 @@
 <link rel="icon" type="image/png" sizes="512x512" href="/img/icon-512.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='25,5 75,5 100,50 75,95 25,95 0,50' fill='%23e01b2f'/%3E%3Ctext x='50' y='66' font-family='Arial' font-weight='900' font-style='italic' font-size='46' fill='white' text-anchor='middle'%3EbL%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ExerciseGym","name":"bez Lipy · Studio Treningu Personalnego","description":"Kameralne studio treningu personalnego. Testy, plan, trening 1:1 i duo, pomiary co 6 tygodni.","address":{"@type":"PostalAddress","addressLocality":"Wrocław","addressRegion":"dolnośląskie","addressCountry":"PL","streetAddress":"[uzupełnij]"},"areaServed":["Wrocław","Lipa Piotrowska","Psie Pole","Kiełczów","Długołęka","Zakrzów"],"priceRange":"$$","url":"https://treningbezlipy.pl/","email":"treningbezlipy@gmail.com","sameAs":["https://www.instagram.com/treningbezlipy/","https://www.facebook.com/treningbezlipy"]}
+{"@context":"https://schema.org","@type":"ExerciseGym","name":"bez Lipy · Studio Treningu Personalnego","description":"Kameralne studio treningu personalnego. Testy, plan, trening 1:1 i duo, pomiary co 6 tygodni.","address":{"@type":"PostalAddress","addressLocality":"Wrocław","addressRegion":"dolnośląskie","addressCountry":"PL"},"areaServed":["Wrocław","Lipa Piotrowska","Psie Pole","Kiełczów","Długołęka","Zakrzów"],"priceRange":"$$","url":"https://treningbezlipy.pl/","email":"treningbezlipy@gmail.com","sameAs":["https://www.instagram.com/treningbezlipy/","https://www.facebook.com/treningbezlipy"]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,7 +65,7 @@ h2 em,h1 em{font-style:italic;color:var(--red)}
 
 /* NAV */
 .nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,backdrop-filter .3s,border-color .3s;border-bottom:1px solid transparent}
-.nav.scrolled{background:rgba(18,18,19,.82);backdrop-filter:blur(14px);border-color:var(--line)}
+.nav.scrolled{background:rgba(18,18,19,.96);backdrop-filter:blur(14px);border-color:var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
 .nav .logo{font-size:28px}
 .nav ul{display:flex;gap:30px;list-style:none;align-items:center}
@@ -282,6 +282,7 @@ section{position:relative}
 .ems-row.best{background:linear-gradient(90deg,rgba(224,27,47,.08),transparent);margin:0 -14px;padding:18px 14px;border-radius:4px}
 .ems-row.best .ems-p{color:var(--red)}
 .ems-row.first .ems-p{color:var(--red)}
+.ems-p.soon,.ems-row.best .ems-p.soon,.ems-row.first .ems-p.soon{font-size:20px;color:var(--muted-dark)}
 .ems-foot{font-size:13px;color:var(--muted-dark);margin-top:16px}
 @media(max-width:900px){.ems{grid-template-columns:1fr}}
 .draft{display:inline-block;background:#fff3c4;color:#6b5300;font-size:12px;font-weight:600;padding:5px 10px;border-radius:4px;margin-top:22px}
@@ -358,6 +359,8 @@ footer .logo{font-size:30px}
 .contact-card .ctas{margin-top:26px}
 .contact-card .ctas .btn{padding:14px 20px;font-size:13px}
 .contact-card a.fill{text-decoration:none}
+.muted-s{display:block;font-size:14px;font-weight:400;color:var(--muted);margin-top:4px}
+.f-alt{font-size:14px;color:var(--muted);margin:0}.f-alt a{color:#fff;font-weight:600}
 .contact-card dd a{text-decoration:none;border-bottom:1px solid rgba(224,27,47,.6)}.contact-card dd a:hover{color:var(--red)}
 .form{margin-top:34px;display:grid;gap:18px;background:var(--graphite);border:1px solid var(--line);border-radius:6px;padding:clamp(22px,3vw,34px)}
 .f-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
@@ -381,7 +384,7 @@ footer .logo{font-size:30px}
 .form .btn{justify-self:start}
 .f-msg{font-size:15px;min-height:1px}
 .f-msg.ok{color:#8fe3a5}.f-msg.bad{color:#ff8a96}
-@media(max-width:560px){.f-row{grid-template-columns:1fr}.form .btn{justify-self:stretch;justify-content:center;white-space:nowrap;padding:18px 16px;font-size:14px}.coach .ph{aspect-ratio:1/1}.contact-card .ctas{flex-direction:column}.contact-card .ctas .btn{justify-content:center}.contact-card dl{grid-template-columns:84px 1fr}.contact .entrance{height:220px}}
+@media(max-width:560px){.f-row{grid-template-columns:1fr}.form .btn{justify-self:stretch;justify-content:center;white-space:nowrap;padding:18px 16px;font-size:14px}.coach .ph{aspect-ratio:1/1}.contact-card .ctas{flex-direction:column}.contact-card .ctas .btn{justify-content:center}.contact-card dl{grid-template-columns:1fr;row-gap:2px}.contact-card dt{font-size:12px;padding-top:12px}.contact-card dd{word-break:break-word}.contact .entrance{height:220px}}
 .f-links{display:flex;gap:22px;flex-wrap:wrap}
 .f-links a{text-decoration:none;color:var(--muted)}.f-links a:hover{color:#fff}
 .m-cta{display:none}
@@ -701,15 +704,12 @@ footer .logo{font-size:30px}
         <h3>Trening EMS</h3>
         <p>Elektrostymulacja mięśni w&nbsp;kamizelce, zawsze 1:1 i&nbsp;pod okiem trenera. Krótko, intensywnie, bez dźwigania ciężarów. Dobry wybór dla zabieganych i&nbsp;tych, którzy wracają po przerwie.</p>
         <p class="ems-note">Przed pierwszym treningiem EMS pytamy o&nbsp;przeciwwskazania (np. ciąża, rozrusznik serca, padaczka).</p>
-        <span class="draft">Propozycja cen, do potwierdzenia</span>
       </div>
       <div class="ems-table rv">
-        <div class="ems-row first"><div><b>Pierwszy trening EMS</b><span>z&nbsp;omówieniem i&nbsp;dopasowaniem kamizelki</span></div><div class="ems-p">79&nbsp;zł</div></div>
-        <div class="ems-row"><div><b>Trening pojedynczy</b><span>ok. 25 minut</span></div><div class="ems-p">129&nbsp;zł</div></div>
-        <div class="ems-row"><div><b>Pakiet 4 treningi</b><span>110&nbsp;zł za trening · ważny 5 tygodni</span></div><div class="ems-p">440&nbsp;zł</div></div>
-        <div class="ems-row best"><div><b>Pakiet 8 treningów</b><span>100&nbsp;zł za trening · ważny 10 tygodni</span></div><div class="ems-p">800&nbsp;zł</div></div>
-        <div class="ems-row"><div><b>Pakiet 12 treningów</b><span>90&nbsp;zł za trening · ważny 14 tygodni</span></div><div class="ems-p">1080&nbsp;zł</div></div>
-        <p class="ems-foot">Bielizna treningowa do EMS w&nbsp;cenie.</p>
+        <div class="ems-row first"><div><b>Pierwszy trening EMS</b><span>z&nbsp;omówieniem i&nbsp;dopasowaniem kamizelki</span></div><div class="ems-p soon">Wkrótce</div></div>
+        <div class="ems-row"><div><b>Trening pojedynczy</b><span>ok. 25 minut, zawsze 1:1</span></div><div class="ems-p soon">Wkrótce</div></div>
+        <div class="ems-row best"><div><b>Pakiety treningów EMS</b><span>im więcej treningów, tym niższa cena za jeden</span></div><div class="ems-p soon">Wkrótce</div></div>
+        <p class="ems-foot">Cennik EMS opublikujemy przed otwarciem, razem z&nbsp;cennikiem treningów personalnych.</p>
       </div>
     </div>
   </div>
@@ -746,7 +746,7 @@ footer .logo{font-size:30px}
         <div class="eyebrow rv"><span class="dot"></span>Opinie</div>
         <h2 class="rv" style="margin-top:18px">Nie wierz nam.<br><em>Wierz podopiecznym.</em></h2>
       </div>
-      <p class="lead rv">Prawdziwe opinie z&nbsp;Google o&nbsp;treningach personalnych z&nbsp;naszymi trenerami. Zero dopisanych gwiazdek.</p>
+      <p class="lead rv">Prawdziwe opinie z&nbsp;Google o&nbsp;treningach personalnych z&nbsp;Nazarem. Zero dopisanych gwiazdek.</p>
     </div>
     <div class="quotes">
       <figure class="quote rv">
@@ -776,13 +776,15 @@ footer .logo{font-size:30px}
       <h2 class="rv" style="margin-top:18px">Pytania.<br><em>Odpowiedzi bez lipy.</em></h2>
     </div>
     <div class="rv">
+      <details><summary>Kiedy otwieracie?</summary><p>Już niedługo. Kończymy urządzanie studia. Zostaw kontakt w&nbsp;formularzu poniżej albo napisz do nas na Instagramie lub Facebooku, a&nbsp;odezwiemy się z&nbsp;terminem otwarcia przed wszystkimi.</p></details>
+      <details><summary>Gdzie dokładnie jesteście?</summary><p>Na Lipie Piotrowskiej we Wrocławiu, kilka minut od Psiego Pola, Zakrzowa i&nbsp;Kiełczowa. Dokładny adres i&nbsp;wskazówki dojazdu podamy przed otwarciem.</p></details>
       <details><summary>Nigdy nie ćwiczyłem/am. To dla mnie?</summary><p>Tak. Właśnie dlatego zaczynamy od testów, a&nbsp;nie od ciężarów. Plan dopasowujemy do punktu, w&nbsp;którym jesteś dziś.</p></details>
       <details><summary>Mam problemy z&nbsp;kręgosłupem. Mogę trenować?</summary><p>W&nbsp;większości przypadków tak, a&nbsp;często właśnie trzeba. Na konsultacji pytamy o&nbsp;diagnozy i&nbsp;zalecenia. Jeśli trzeba, najpierw odsyłamy do fizjoterapeuty. Bez lipy.</p></details>
       <details><summary>Ile trwa trening?</summary><p>Trening personalny trwa 60 minut, a&nbsp;trening EMS ok. 25 minut.</p></details>
       <details><summary>Czy trenujecie na zewnątrz?</summary><p>Tak. Na tyłach studia mamy własny ogródek treningowy, w&nbsp;którym trenujemy w&nbsp;sezonie, i&nbsp;stale go rozbudowujemy.</p></details>
       <details><summary>Co zabrać?</summary><p>Strój, czyste buty na zmianę i&nbsp;wodę. Szatnia i&nbsp;prysznic są na miejscu.</p></details>
       <details><summary>Mogę trenować z&nbsp;partnerem lub przyjaciółką?</summary><p>Tak, w&nbsp;formacie duo. Trenujecie razem, ale każde z&nbsp;Was ma swój plan i&nbsp;swoje pomiary.</p></details>
-      <details><summary>Co, jeśli muszę odwołać trening?</summary><p><span class="fill">[Zasady odwoływania do ustalenia, np. bezpłatnie do 24 h przed treningiem.]</span></p></details>
+      <details><summary>Co, jeśli muszę odwołać trening?</summary><p>Życie się zdarza. Jasne zasady odwoływania i&nbsp;przekładania treningów dostaniesz przed zakupem pakietu, czarno na białym, bez drobnego druczku.</p></details>
     </div>
   </div>
 </section>
@@ -794,7 +796,7 @@ footer .logo{font-size:30px}
     <h2 class="big rv" style="margin-top:22px">Pierwszy krok?<br><em>Bez lipy.</em></h2>
     <div class="contact-grid">
       <div class="rv">
-        <p class="lead">Umów konsultację z&nbsp;testami. 60 minut, zero sprzedawania na siłę. Po spotkaniu wiesz, gdzie jesteś i&nbsp;co dalej, nawet jeśli nie zostaniesz.</p>
+        <p class="lead">Zapisz się na konsultację z&nbsp;testami. 60 minut, zero sprzedawania na siłę. Po spotkaniu wiesz, gdzie jesteś i&nbsp;co dalej, nawet jeśli nie zostaniesz. Przed otwarciem odezwiemy się do Ciebie jako pierwsi.</p>
         <form class="form" id="form" novalidate>
           <div class="f-row">
             <label class="f"><span>Imię</span><input name="imie" autocomplete="given-name" required placeholder="Jak masz na imię?"></label>
@@ -812,26 +814,26 @@ footer .logo{font-size:30px}
             </div>
           </fieldset>
           <label class="f"><span>Kiedy Ci pasuje? <i>(opcjonalnie)</i></span><input name="kiedy" placeholder="np. wtorki rano, po 18:00"></label>
-          <label class="consent"><input type="checkbox" name="zgoda" required><span>Zgadzam się na kontakt w&nbsp;sprawie konsultacji. Dane przetwarzamy zgodnie z&nbsp;<a href="#">polityką prywatności</a>.</span></label>
-          <button class="btn btn-red" type="submit">Oddzwońcie do mnie
+          <label class="consent"><input type="checkbox" name="zgoda" required><span>Zgadzam się na kontakt w&nbsp;sprawie konsultacji. Dane przetwarzamy zgodnie z&nbsp;<a href="/polityka-prywatnosci.html">polityką prywatności</a>.</span></label>
+          <button class="btn btn-red" type="submit">Wyślij zgłoszenie
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
           <p class="f-msg" id="fmsg" role="status"></p>
+          <p class="f-alt">Wolisz komunikator? <a href="https://m.me/treningbezlipy" target="_blank" rel="noopener">Messenger</a> · <a href="https://ig.me/m/treningbezlipy" target="_blank" rel="noopener">Instagram</a></p>
         </form>
       </div>
       <div class="rv contact-side">
         <div class="entrance"><img src="img/wiatrolap.webp" alt="Wejście do studia od strony ogródka" loading="lazy"></div>
         <div class="contact-card">
           <dl>
-            <dt>Adres</dt><dd>Lipa Piotrowska, Wrocław<br><span class="fill">ul. [uzupełnij]</span></dd>
-            <dt>Telefon</dt><dd><a href="#" class="fill">[uzupełnij]</a></dd>
+            <dt>Adres</dt><dd>Lipa Piotrowska, Wrocław<br><span class="muted-s">Dokładny adres podamy przed otwarciem</span></dd>
             <dt>E-mail</dt><dd><a href="mailto:treningbezlipy@gmail.com">treningbezlipy@gmail.com</a></dd>
-            <dt>Godziny</dt><dd class="fill">[np. pn–pt 6:30–21:00, sob 8:00–14:00]</dd>
+            <dt>Godziny</dt><dd>Treningi po wcześniejszym umówieniu<br><span class="muted-s">Godziny otwarcia podamy przed startem</span></dd>
             <dt>Instagram</dt><dd><a href="https://www.instagram.com/treningbezlipy/" target="_blank" rel="noopener">@treningbezlipy</a></dd>
             <dt>Facebook</dt><dd><a href="https://www.facebook.com/treningbezlipy" target="_blank" rel="noopener">facebook.com/treningbezlipy</a></dd>
           </dl>
           <div class="ctas">
-            <a href="#" class="btn btn-red">Rezerwacja online</a>
-            <a href="#" class="btn btn-ghost">Zadzwoń</a>
+            <a href="https://m.me/treningbezlipy" target="_blank" rel="noopener" class="btn btn-red">Napisz na Messengerze</a>
+            <a href="https://ig.me/m/treningbezlipy" target="_blank" rel="noopener" class="btn btn-ghost">Napisz na Instagramie</a>
           </div>
         </div>
       </div>
@@ -840,7 +842,7 @@ footer .logo{font-size:30px}
   <footer>
     <div class="wrap">
       <a href="#top" class="logo"><span class="b">bez</span> <span class="l">Lipy</span></a>
-      <nav class="f-links" aria-label="Stopka"><a href="#metoda">Metoda</a><a href="#studio">Studio</a><a href="#cennik">Cennik</a><a href="#faq">FAQ</a><a href="#">Polityka prywatności</a><a href="https://www.instagram.com/treningbezlipy/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/treningbezlipy" target="_blank" rel="noopener">Facebook</a></nav>
+      <nav class="f-links" aria-label="Stopka"><a href="#metoda">Metoda</a><a href="#studio">Studio</a><a href="#cennik">Cennik</a><a href="#faq">FAQ</a><a href="/polityka-prywatnosci.html">Polityka prywatności</a><a href="https://www.instagram.com/treningbezlipy/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/treningbezlipy" target="_blank" rel="noopener">Facebook</a></nav>
       <span>© 2026 bez Lipy · Studio Treningu Personalnego · Lipa Piotrowska, Wrocław</span>
     </div>
   </footer>
@@ -872,8 +874,9 @@ const boxes=[...document.querySelectorAll('#quiz input')],pct=document.getElemen
 const msgs=['Czysto. Zero lipy. Ale czy masz to na papierze? Sprawdźmy na konsultacji.','Lekka lipa. Jeden test i&nbsp;wiesz, na czym stoisz.','Lipa zaczyna kwitnąć. Czas na plan w&nbsp;liczbach.','Sporo lipy. Najwyższy czas na <a href="#kontakt">konsultację z&nbsp;testami</a>.','Lipa w&nbsp;pełnym rozkwicie. <a href="#kontakt">Umów konsultację</a>, zrobimy porządek.','100% lipy. Dobra wiadomość: od dziś może być 0. <a href="#kontakt">Zaczynamy?</a>'];
 boxes.forEach(b=>b.onchange=()=>{const n=boxes.filter(x=>x.checked).length,p=n*20;pct.textContent=p+'%';bar.style.width=p+'%';ver.innerHTML=msgs[n]});
 
-// FORM (podgląd: bez wysyłki, do podpięcia)
+// FORM: gotowa wiadomość e-mail do studia
 const form=document.getElementById('form'),fmsg=document.getElementById('fmsg');
+const celNames={plecy:'Plecy bez bólu',sila:'Siła',redukcja:'Mniej w pasie',ciaza:'Powrót po ciąży',ems:'EMS',inne:'Inny'};
 form.addEventListener('submit',e=>{
   e.preventDefault();let ok=true;
   const imie=form.imie,tel=form.tel,zg=form.zgoda;
@@ -882,7 +885,10 @@ form.addEventListener('submit',e=>{
   if(tel.value.replace(/\D/g,'').length<9){tel.classList.add('err');ok=false}
   if(!zg.checked){zg.closest('.consent').classList.add('err');ok=false}
   if(!ok){fmsg.className='f-msg bad';fmsg.textContent='Uzupełnij imię, telefon (min. 9 cyfr) i zaznacz zgodę.';return}
-  fmsg.className='f-msg ok';fmsg.textContent='Dzięki, '+imie.value.trim()+'! Oddzwonimy w ciągu 24 godzin. Bez lipy.';form.querySelector('button').disabled=true;
+  const cel=celNames[(form.querySelector('input[name=cel]:checked')||{}).value]||'';
+  const body='Cześć!\n\nChcę zapisać się na konsultację z testami.\n\nImię: '+imie.value.trim()+'\nTelefon: '+tel.value.trim()+'\nCel: '+cel+(form.kiedy.value.trim()?'\nKiedy mi pasuje: '+form.kiedy.value.trim():'')+'\n\nWysłane ze strony treningbezlipy.pl';
+  location.href='mailto:treningbezlipy@gmail.com?subject='+encodeURIComponent('Konsultacja: '+imie.value.trim())+'&body='+encodeURIComponent(body);
+  fmsg.className='f-msg ok';fmsg.innerHTML='Otwieramy Twoją pocztę z&nbsp;gotową wiadomością. Kliknij w&nbsp;niej „Wyślij”, a&nbsp;odezwiemy się w&nbsp;ciągu 24 godzin. Nie otworzyła się poczta? Napisz na <a href="https://m.me/treningbezlipy" target="_blank" rel="noopener">Messengerze</a> albo na <a href="mailto:treningbezlipy@gmail.com">treningbezlipy@gmail.com</a>.';
 });
 
 // MOBILE CTA
