@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bez Lipy · Studio Treningu Personalnego · Wrocław</title>
+<meta name="description" content="Prywatne studio treningu personalnego na Lipie Piotrowskiej we Wrocławiu. Testujemy, planujemy, mierzymy. Trening bez lipy.">
+<meta name="theme-color" content="#121213">
+<meta property="og:title" content="bez Lipy · Studio Treningu Personalnego · Wrocław">
+<meta property="og:description" content="Testujemy, planujemy, mierzymy. Prywatne studio treningu personalnego na Lipie Piotrowskiej.">
+<meta property="og:image" content="img/sala.webp">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='25,5 75,5 100,50 75,95 25,95 0,50' fill='%23e01b2f'/%3E%3Ctext x='50' y='66' font-family='Arial' font-weight='900' font-style='italic' font-size='46' fill='white' text-anchor='middle'%3EbL%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ExerciseGym","name":"bez Lipy · Studio Treningu Personalnego","description":"Prywatne studio treningu personalnego. Testy, plan, trening 1:1 i duo, pomiary co 6 tygodni.","address":{"@type":"PostalAddress","addressLocality":"Wrocław","addressRegion":"dolnośląskie","addressCountry":"PL","streetAddress":"[uzupełnij]"},"areaServed":["Wrocław","Lipa Piotrowska","Psie Pole","Kiełczów","Długołęka","Zakrzów"],"priceRange":"129–200 zł"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;0,800;0,900;1,700;1,800;1,900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#121213; --graphite:#1c1c1e; --graphite-2:#262628; --line:#3a3a3d;
+  --concrete:#d8d1c9; --concrete-2:#ece7e1; --paper:#f6f3ef;
+  --red:#e01b2f; --red-deep:#b10f20; --oak:#c9a26b;
+  --text:#f2efeb; --muted:#a9a49e; --muted-dark:#5d5852;
+  --display:"Montserrat",system-ui,sans-serif; --body:"Inter",system-ui,sans-serif;
+  --r:4px; --max:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.logo{font-family:var(--display);font-style:italic;font-weight:900;letter-spacing:-.02em;text-decoration:none;white-space:nowrap}
+.logo .b{color:#fff}.logo .l{color:var(--red)}
+.eyebrow{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.eyebrow .dot{display:inline-block;width:8px;height:8px;background:var(--red);margin-right:10px;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+h1,h2,h3{font-family:var(--display);font-weight:900;line-height:.98;letter-spacing:-.03em}
+h2{font-size:clamp(30px,3.6vw,52px);font-style:italic;line-height:1.04}
+h2 em,h1 em{font-style:italic;color:var(--red)}
+.lead{font-size:clamp(17px,1.3vw,19px);color:var(--muted);max-width:56ch}
+.btn{display:inline-flex;align-items:center;gap:12px;font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;padding:18px 28px;border-radius:var(--r);transition:transform .2s,background .2s,box-shadow .2s;border:0;cursor:pointer}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 0 0 0 rgba(224,27,47,.5)}
+.btn-red:hover{background:var(--red-deep);transform:translateY(-2px);box-shadow:0 10px 30px -8px rgba(224,27,47,.7)}
+.btn-ghost{color:#fff;border:1.5px solid rgba(255,255,255,.35)}
+.btn-ghost:hover{border-color:#fff;transform:translateY(-2px)}
+.btn svg{width:18px;height:18px}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,backdrop-filter .3s,border-color .3s;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(18,18,19,.82);backdrop-filter:blur(14px);border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.nav .logo{font-size:28px}
+.nav ul{display:flex;gap:30px;list-style:none;align-items:center}
+.nav ul a{text-decoration:none;font-weight:500;font-size:15px;color:#d9d4ce;transition:color .2s}
+.nav ul a:hover{color:#fff}
+.nav .btn{padding:12px 20px;font-size:13px}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger span{display:block;width:26px;height:2px;background:#fff;margin:6px auto;transition:.3s}
+@media(max-width:900px){
+  .nav.open{background:var(--ink);border-color:var(--line)}
+  .nav ul{position:fixed;inset:76px 0 auto 0;flex-direction:column;align-items:stretch;background:var(--ink);padding:4px 24px 28px;gap:0;border-bottom:1px solid var(--line);opacity:0;visibility:hidden;transform:translateY(-12px);transition:opacity .25s,transform .3s,visibility .3s;max-height:calc(100svh - 76px);overflow:auto}
+  .nav.open ul{opacity:1;visibility:visible;transform:none}
+  .nav ul a{display:block;font-family:var(--display);font-weight:800;font-style:italic;font-size:30px;color:#fff;padding:14px 0;border-bottom:1px solid var(--line)}
+  .nav ul li:last-child a{border:0;margin-top:22px;font-style:normal;font-size:15px;justify-content:center;padding:18px}
+  .burger{display:block}
+  .nav.open .burger span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+  .nav.open .burger span:nth-child(2){opacity:0}
+  .nav.open .burger span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+  body.menu-open{overflow:hidden}
+}
+
+/* HERO */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero-img{position:absolute;inset:0;z-index:-3}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:30% 60%;filter:saturate(.9) brightness(.55);transform:scale(1.06);animation:slowzoom 18s ease-out forwards}
+@keyframes slowzoom{to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(18,18,19,.82) 0%,rgba(18,18,19,.35) 55%,rgba(18,18,19,0) 80%),linear-gradient(180deg,rgba(18,18,19,.6) 0%,rgba(18,18,19,.1) 35%,rgba(18,18,19,.8) 80%,var(--ink) 100%)}
+.hero .wrap{width:100%;padding-bottom:clamp(48px,9vh,110px);padding-top:140px}
+.hero h1{font-size:clamp(44px,6.4vw,96px);font-style:italic;line-height:1;margin:20px 0 24px}
+.hero h1 .strike{position:relative;display:inline-block}
+.hero p.lead{color:#d6d0c9;margin-bottom:36px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.scroll-hint{position:absolute;right:24px;bottom:32px;writing-mode:vertical-rl;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+.scroll-hint::after{content:"";display:block;width:1px;height:60px;background:linear-gradient(var(--red),transparent);margin:12px auto 0}
+@media(max-width:700px){.scroll-hint{display:none}.hide-m{display:none}
+  .hero-img img{object-position:96% 60%}
+  .hero .ctas{flex-direction:column}.hero .ctas .btn{justify-content:center}
+  .hero h1{margin:16px 0 22px}
+}
+
+/* TICKER */
+.ticker{background:var(--red);overflow:hidden;white-space:nowrap;border-block:1px solid var(--red-deep)}
+.ticker-track{display:inline-flex;animation:tick 32s linear infinite;padding:16px 0}
+.ticker span{font-family:var(--display);font-weight:900;font-style:italic;font-size:clamp(16px,1.7vw,22px);text-transform:uppercase;letter-spacing:-.01em;padding:0 22px;display:inline-flex;align-items:center;gap:44px}
+.ticker span::after{content:"";width:14px;height:14px;background:#fff;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* STATS */
+.stats{background:var(--ink);padding:70px 0;border-bottom:1px solid var(--line)}
+.stats .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.stat .n{font-family:var(--display);font-weight:900;font-style:italic;font-size:clamp(36px,3.6vw,52px);line-height:1;letter-spacing:-.04em}
+.stat .n small{font-size:.45em;color:var(--red);margin-left:4px}
+.stat p{color:var(--muted);font-size:15px;margin-top:10px;max-width:22ch}
+@media(max-width:800px){.stats .grid{grid-template-columns:repeat(2,1fr);row-gap:44px}}
+
+section{position:relative}
+.sec{padding:clamp(80px,12vw,150px) 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:52px;flex-wrap:wrap}
+.sec-head .lead{max-width:44ch}
+
+/* LIPA VS */
+.versus{background:var(--concrete-2);color:var(--ink)}
+.versus .eyebrow{color:var(--muted-dark)}
+.versus .lead{color:var(--muted-dark)}
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;border-radius:6px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.35)}
+.vs-col{padding:clamp(28px,4vw,52px)}
+.vs-col h3{font-size:clamp(26px,2.6vw,36px);font-style:italic;margin-bottom:30px;display:flex;align-items:center;gap:14px}
+.vs-lipa{background:#cfc8bf;color:#5a544d}
+.vs-lipa h3{color:#7b746c;text-decoration:line-through;text-decoration-thickness:5px;text-decoration-color:var(--red)}
+.vs-bez{background:var(--graphite);color:var(--text)}
+.vs-col ul{list-style:none;display:grid;gap:0}
+.vs-col li{padding:18px 0 18px 40px;position:relative;border-top:1px solid rgba(0,0,0,.1);font-size:17px}
+.vs-bez li{border-color:var(--line)}
+.vs-col li::before{position:absolute;left:0;top:17px;width:24px;height:24px;display:grid;place-items:center;font-weight:800;font-size:14px;border-radius:50%}
+.vs-lipa li::before{content:"✕";color:#8d857c;border:1.5px solid #a39b91}
+.vs-bez li::before{content:"✓";color:#fff;background:var(--red)}
+.vs-lipa li{opacity:.8}
+@media(max-width:800px){.vs-grid{grid-template-columns:1fr}}
+
+/* METHOD */
+.method{background:var(--ink)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.step{background:var(--graphite);padding:36px 28px 40px;position:relative;transition:background .3s}
+.step:hover{background:var(--graphite-2)}
+.step .num{font-family:var(--display);font-weight:900;font-style:italic;font-size:60px;line-height:1;color:transparent;-webkit-text-stroke:1.5px #4a4a4e;transition:-webkit-text-stroke-color .3s,color .3s}
+.step:hover .num{-webkit-text-stroke-color:var(--red);color:rgba(224,27,47,.12)}
+.step h3{font-size:24px;font-style:italic;margin:26px 0 14px}
+.step p{color:var(--muted);font-size:16px}
+.step .tag{display:inline-block;margin-top:22px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.method .arrow{display:flex;align-items:center;gap:12px;margin-top:34px;color:var(--muted);font-size:15px}
+.method .arrow b{color:#fff}
+@media(max-width:960px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* FOR WHO */
+.forwho{background:var(--graphite)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--ink);border:1px solid var(--line);border-radius:6px;padding:34px 30px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s}
+.card:hover{border-color:var(--red);transform:translateY(-4px)}
+.card .hex{width:46px;height:46px;background:var(--graphite-2);clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);display:grid;place-items:center;margin-bottom:26px;transition:background .3s}
+.card:hover .hex{background:var(--red)}
+.card .hex svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2}
+.card h3{font-size:21px;font-style:italic;margin-bottom:12px}
+.card p{color:var(--muted);font-size:16px}
+@media(max-width:900px){.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.cards{grid-template-columns:1fr}}
+
+/* STUDIO */
+.studio{background:var(--ink)}
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:120px;gap:14px}
+.gallery figure{position:relative;overflow:hidden;border-radius:6px;background:var(--graphite);cursor:zoom-in}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .4s;filter:brightness(.92)}
+.gallery figure:hover img{transform:scale(1.05);filter:brightness(1)}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 14px;background:linear-gradient(transparent,rgba(0,0,0,.75));font-family:var(--display);font-weight:800;font-style:italic;font-size:18px}
+.gallery figcaption span{display:block;font-family:var(--body);font-style:normal;font-weight:400;font-size:13px;color:#cfc9c2}
+.g1{grid-column:span 8;grid-row:span 4}.g2{grid-column:span 4;grid-row:span 2}.g3{grid-column:span 4;grid-row:span 2}
+.g4{grid-column:span 4;grid-row:span 3}.g5{grid-column:span 4;grid-row:span 3}.g6{grid-column:span 4;grid-row:span 3}
+.g7{grid-column:span 3;grid-row:span 2}.g8{grid-column:span 3;grid-row:span 2}.g9{grid-column:span 3;grid-row:span 2}.g10{grid-column:span 3;grid-row:span 2}
+@media(max-width:600px){.gallery{gap:10px}.gallery figcaption{font-size:15px;padding:30px 12px 10px}.gallery figure:not(.g1) figcaption span{display:none}.chip{font-size:14px;padding:8px 14px}.chips{gap:8px}}
+@media(max-width:900px){.gallery{grid-auto-rows:90px}.g1{grid-column:span 12;grid-row:span 3}.g2,.g3,.g4,.g5,.g6,.g7,.g8,.g9,.g10{grid-column:span 6;grid-row:span 2}}
+.note{font-size:13px;color:var(--muted);margin-top:18px}
+.kit{margin-top:80px;display:grid;grid-template-columns:1fr 1.3fr;gap:60px;align-items:start}
+.kit h3{font-size:clamp(24px,2.4vw,34px);font-style:italic}
+.kit h3 + p{color:var(--muted);margin-top:16px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{border:1px solid var(--line);border-radius:100px;padding:10px 18px;font-size:15px;color:#e2ddd7;background:var(--graphite);transition:border-color .2s}
+.chip:hover{border-color:var(--red)}
+.chip b{color:var(--red);font-weight:600}
+.plan{margin-top:100px}
+.plan-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;margin-bottom:34px}
+.plan-head h3{font-size:clamp(24px,2.4vw,34px);font-style:italic;margin-top:16px}
+.plan-head h3 em{color:var(--red)}
+.plan-head p{color:var(--muted);max-width:40ch}
+.plan-scroll{background:var(--graphite);border:1px solid var(--line);border-radius:6px;padding:20px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.plan-svg{display:block;width:100%;min-width:760px;height:auto}
+.pl-lbl{font-family:var(--display);font-weight:800;font-size:14px;fill:#f2efeb;letter-spacing:.06em}
+.pl-lbl.s{font-size:11px}.pl-lbl.g{fill:#9fb3a3}.pl-lbl.ems{fill:#fff}
+.pl-sub{font-family:var(--body);font-size:11px;fill:#a9a49e}
+.pl-tiny{font-family:var(--body);font-size:9.5px;fill:#a9a49e}.pl-tiny.r{fill:#e01b2f;font-weight:600}
+.pl-room{fill:#222224;stroke:#4a4a4e;stroke-width:2}
+.pl-furn{fill:#2e2e31;stroke:#55555a;stroke-width:1.5;rx:3}
+.pl-furn.oak{fill:#c9a26b;stroke:none}
+.pl-rack{fill:#0c0c0d;stroke:#e01b2f;stroke-width:2}
+.pl-ems{fill:rgba(224,27,47,.18);stroke:#e01b2f;stroke-width:1.5;stroke-dasharray:4 3}
+.pl-mk polygon{fill:#e01b2f}
+.pl-mk text{font-family:var(--display);font-weight:900;font-size:13px;fill:#fff;text-anchor:middle}
+.plan-note{margin-top:12px}
+.plan-list{list-style:none;counter-reset:z;display:grid;grid-template-columns:repeat(5,1fr);gap:24px;margin-top:34px}
+.plan-list li{counter-increment:z;padding-top:18px;border-top:2px solid var(--line)}
+.plan-list li::before{content:counter(z);display:grid;place-items:center;width:28px;height:28px;margin-bottom:14px;font-family:var(--display);font-weight:900;font-size:13px;background:var(--red);clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+.plan-list b{display:block;font-family:var(--display);font-weight:800;font-size:17px;margin-bottom:6px}
+.plan-list span{color:var(--muted);font-size:15px}
+@media(max-width:1000px){.plan-list{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.plan-list{grid-template-columns:1fr;gap:4px}.plan-list li{display:grid;grid-template-columns:44px 1fr;padding:16px 0;border-top-width:1px}.plan-list li::before{margin:0}}
+@media(max-width:900px){.kit{grid-template-columns:1fr;gap:36px}}
+
+/* LIPOMETR */
+.quiz{background:var(--red);color:#fff;overflow:hidden}
+.quiz::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(120deg,transparent 0 60px,rgba(255,255,255,.04) 60px 62px)}
+.quiz .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.quiz .eyebrow{color:rgba(255,255,255,.75)}.quiz .eyebrow .dot{background:#fff}
+.quiz h2 em{color:var(--ink)}
+.quiz .lead{color:rgba(255,255,255,.85);margin-top:20px}
+.q-list{display:grid;gap:10px}
+.q{display:flex;gap:16px;align-items:center;background:rgba(0,0,0,.18);border:1.5px solid rgba(255,255,255,.2);padding:16px 18px;border-radius:6px;cursor:pointer;transition:background .2s,border-color .2s;user-select:none}
+.q:hover{background:rgba(0,0,0,.28)}
+.q input{position:absolute;opacity:0;pointer-events:none}
+.q .box{flex:none;width:26px;height:26px;border:2px solid #fff;border-radius:4px;display:grid;place-items:center;transition:background .2s}
+.q .box svg{width:16px;height:16px;stroke:var(--red);stroke-width:3.5;fill:none;opacity:0;transition:opacity .2s}
+.q input:checked ~ .box{background:#fff}.q input:checked ~ .box svg{opacity:1}
+.q input:checked ~ .t{font-weight:600}
+.q input:focus-visible ~ .box{outline:3px solid var(--ink);outline-offset:2px}
+.meter{margin-top:26px;background:var(--ink);border-radius:6px;padding:24px 24px 22px}
+.meter .row{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:13px;color:var(--muted)}
+.meter .pct{font-size:36px;font-style:italic;font-weight:900;color:#fff;letter-spacing:-.03em}
+.bar{height:10px;background:#333;border-radius:10px;margin:12px 0 16px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#f2b8bf,var(--red));border-radius:10px;transition:width .6s cubic-bezier(.2,.8,.2,1)}
+.verdict{color:#e7e2dc;font-size:16px;min-height:52px}
+.verdict a{color:#fff;font-weight:600}
+@media(max-width:900px){.quiz .wrap{grid-template-columns:1fr;gap:40px}}
+
+/* PRICING */
+.pricing{background:var(--concrete-2);color:var(--ink)}
+.pricing .eyebrow,.pricing .lead{color:var(--muted-dark)}
+.prices{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.price{background:#fff;border-radius:6px;padding:32px 26px;display:flex;flex-direction:column;border:1.5px solid transparent;transition:transform .3s,border-color .3s}
+.price:hover{transform:translateY(-4px);border-color:var(--ink)}
+.price.hot{background:var(--graphite);color:#fff}
+.price .lbl{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:12px;color:var(--muted-dark)}
+.price.hot .lbl{color:var(--red)}
+.price h3{font-size:24px;font-style:italic;margin:12px 0 20px}
+.price .amt{font-family:var(--display);font-weight:900;font-style:italic;font-size:42px;letter-spacing:-.04em;line-height:1}
+.price .amt small{font-size:18px;font-weight:700;letter-spacing:0;margin-left:4px}
+.price .per{font-size:14px;color:var(--muted-dark);margin:8px 0 22px}
+.price.hot .per{color:var(--muted)}
+.price ul{list-style:none;font-size:15px;display:grid;gap:9px;margin-bottom:28px;flex:1}
+.price li{padding-left:22px;position:relative}
+.price li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:10px;background:var(--red);clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+.price .btn{justify-content:center;padding:14px 18px;font-size:13px}
+.price .btn-dark{background:var(--ink);color:#fff}.price .btn-dark:hover{background:var(--red)}
+.draft{display:inline-block;background:#fff3c4;color:#6b5300;font-size:12px;font-weight:600;padding:5px 10px;border-radius:4px;margin-top:22px}
+@media(max-width:1000px){.prices{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.prices{grid-template-columns:1fr}}
+
+/* TEAM */
+.team{background:var(--ink)}
+.coaches{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.coach{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--graphite)}
+.coach .ph{aspect-ratio:4/3;background:radial-gradient(circle at 50% 40%,#2e2e31,#161617);display:grid;place-items:center;position:relative}
+.coach .ph .hx{width:120px;height:120px;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);background:var(--red);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-style:italic;font-size:44px}
+.coach .ph small{position:absolute;bottom:12px;font-size:12px;color:var(--muted)}
+.coach .body{padding:26px}
+.coach h3{font-size:22px;font-style:italic}
+.coach .role{color:var(--red);font-weight:600;font-size:14px;margin:6px 0 14px;letter-spacing:.04em}
+.coach p{color:var(--muted);font-size:15px}
+.coach.join{border-style:dashed;display:flex;flex-direction:column;justify-content:center;padding:34px;background:transparent}
+.coach.join h3{margin-bottom:12px}
+@media(max-width:900px){.coaches{grid-template-columns:1fr}}
+
+/* FAQ */
+.faq{background:var(--graphite)}
+.faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
+details{border-top:1px solid var(--line)}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:24px 50px 24px 0;font-family:var(--display);font-weight:800;font-size:19px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:6px;top:18px;font-size:30px;font-weight:500;color:var(--red);transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);padding:0 40px 26px 0}
+@media(max-width:900px){.faq .wrap{grid-template-columns:1fr;gap:30px}}
+
+/* CTA / CONTACT */
+.contact{background:var(--ink);overflow:hidden;padding-top:clamp(90px,12vw,160px)}
+.contact .big{font-size:clamp(38px,5vw,72px);font-style:italic;line-height:1}
+.contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;margin-top:60px;align-items:start}
+.contact-card{background:var(--graphite);border:1px solid var(--line);border-radius:6px;padding:34px}
+.contact-card dl{display:grid;grid-template-columns:110px 1fr;row-gap:16px;margin-top:8px}
+.contact-card dt{color:var(--muted);font-size:14px;text-transform:uppercase;letter-spacing:.1em;padding-top:2px}
+.contact-card dd{font-weight:500}
+.fill{color:#f5c36b}
+.contact .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+.contact .entrance{border-radius:6px;overflow:hidden;height:100%;min-height:340px}
+.contact .entrance img{width:100%;height:100%;object-fit:cover}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
+footer{background:var(--ink);border-top:1px solid var(--line);padding:40px 0;margin-top:clamp(80px,10vw,130px)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:14px}
+footer .logo{font-size:30px}
+
+.contact-side{display:grid;gap:20px}
+.contact .entrance{min-height:0;height:300px}
+.contact-card .ctas{margin-top:26px}
+.contact-card .ctas .btn{padding:14px 20px;font-size:13px}
+.contact-card a.fill{text-decoration:none}
+.form{margin-top:34px;display:grid;gap:18px;background:var(--graphite);border:1px solid var(--line);border-radius:6px;padding:clamp(22px,3vw,34px)}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.f{display:grid;gap:8px;border:0;min-width:0}
+.f > span,.f legend{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.f i{font-style:normal;text-transform:none;letter-spacing:0;font-weight:400}
+.f input{font:inherit;font-size:16px;color:#fff;background:var(--ink);border:1.5px solid var(--line);border-radius:var(--r);padding:14px 16px;transition:border-color .2s;width:100%}
+.f input::placeholder{color:#6b6762}
+.f input:focus{outline:none;border-color:var(--red)}
+.f input.err{border-color:#ff6b7a}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.pills label{cursor:pointer}
+.pills input{position:absolute;opacity:0}
+.pills span{display:inline-block;padding:10px 16px;border:1.5px solid var(--line);border-radius:100px;font-size:15px;transition:.2s}
+.pills label:hover span{border-color:#77777c}
+.pills input:checked + span{background:var(--red);border-color:var(--red);color:#fff}
+.pills input:focus-visible + span{outline:3px solid #fff;outline-offset:2px}
+.consent{display:flex;gap:12px;font-size:14px;color:var(--muted);cursor:pointer;align-items:flex-start}
+.consent input{margin-top:3px;width:18px;height:18px;accent-color:var(--red);flex:none}
+.consent.err span{color:#ff8a96}
+.form .btn{justify-self:start}
+.f-msg{font-size:15px;min-height:1px}
+.f-msg.ok{color:#8fe3a5}.f-msg.bad{color:#ff8a96}
+@media(max-width:560px){.f-row{grid-template-columns:1fr}.form .btn{justify-self:stretch;justify-content:center;white-space:nowrap;padding:18px 16px;font-size:14px}.coach .ph{aspect-ratio:16/9}.contact-card .ctas{flex-direction:column}.contact-card .ctas .btn{justify-content:center}.contact-card dl{grid-template-columns:84px 1fr}.contact .entrance{height:220px}.coach .ph .hx{width:96px;height:96px;font-size:36px}}
+.f-links{display:flex;gap:22px;flex-wrap:wrap}
+.f-links a{text-decoration:none;color:var(--muted)}.f-links a:hover{color:#fff}
+.m-cta{display:none}
+@media(max-width:700px){
+  .m-cta{display:block;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;background:var(--red);color:#fff;text-align:center;text-decoration:none;font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:17px;border-radius:6px;box-shadow:0 12px 30px -8px rgba(0,0,0,.6);transform:translateY(150%);transition:transform .35s}
+  .m-cta.show{transform:none}
+  footer{padding-bottom:96px}
+}
+
+/* LIGHTBOX */
+.lb{position:fixed;inset:0;background:rgba(10,10,10,.94);z-index:100;display:none;place-items:center;padding:30px;cursor:zoom-out}
+.lb.open{display:grid}
+.lb img{max-width:100%;max-height:88vh;border-radius:4px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.lb p{color:var(--muted);text-align:center;margin-top:14px;font-size:14px}
+
+/* REVEAL */
+[id]{scroll-margin-top:76px}
+.hero .rv{opacity:1;transform:none;transition:none;animation:heroIn .9s cubic-bezier(.2,.7,.2,1) both}
+.hero .rv:nth-child(2){animation-delay:.12s}.hero .rv:nth-child(3){animation-delay:.24s}.hero .rv:nth-child(4){animation-delay:.36s}
+@keyframes heroIn{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="bez Lipy, strona główna"><span class="b">bez</span> <span class="l">Lipy</span></a>
+    <ul id="menu">
+      <li><a href="#metoda">Metoda</a></li>
+      <li><a href="#studio">Studio</a></li>
+      <li><a href="#cennik">Cennik</a></li>
+      <li><a href="#trenerzy">Trenerzy</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#kontakt" class="btn btn-red">Umów konsultację</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-img"><img src="img/sala.webp" alt="Sala treningowa bez Lipy z sufitem z heksagonów LED, rackami i torem do sanek"></div>
+  <div class="wrap">
+    <div class="eyebrow rv"><span class="dot"></span><span class="hide-m">Studio treningu personalnego · </span>Lipa Piotrowska · Wrocław</div>
+    <h1 class="rv">Trening<br><em>bez lipy.</em></h1>
+    <p class="lead rv">Prywatne studio, w którym trenujesz tylko z&nbsp;trenerem. Testujemy, planujemy, mierzymy. Bez tłumu, bez ściemy, bez zgadywania.</p>
+    <div class="ctas rv">
+      <a href="#kontakt" class="btn btn-red">Umów konsultację
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="#studio" class="btn btn-ghost">Zobacz studio</a>
+    </div>
+  </div>
+  <div class="scroll-hint">Przewiń</div>
+</header>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Zero ściemy</span><span>Zero tłumu</span><span>Zero zgadywania</span><span>Plan na papierze</span><span>Wyniki w liczbach</span><span>Tylko z trenerem</span>
+    <span>Zero ściemy</span><span>Zero tłumu</span><span>Zero zgadywania</span><span>Plan na papierze</span><span>Wyniki w liczbach</span><span>Tylko z trenerem</span>
+  </div>
+</div>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap grid">
+    <div class="stat rv"><div class="n" data-count="66">0<small>m²</small></div><p>tylko pod trening z&nbsp;trenerem. Żadnego „open gymu”.</p></div>
+    <div class="stat rv"><div class="n" data-count="3">0<small>os.</small></div><p>maksymalnie na sali jednocześnie. Zero kolejek do sprzętu.</p></div>
+    <div class="stat rv"><div class="n" data-count="6">0<small>tyg.</small></div><p>i&nbsp;robimy re-test. Postęp widzisz w&nbsp;liczbach, nie „na oko”.</p></div>
+    <div class="stat rv"><div class="n" data-count="10.8" data-dec="1">0<small>m</small></div><p>toru do pchania sanek. Bo kondycja to nie tylko bieżnia.</p></div>
+  </div>
+</section>
+
+<!-- LIPA VS BEZ LIPY -->
+<section class="sec versus">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow rv"><span class="dot"></span>Różnica</div>
+        <h2 class="rv" style="margin-top:18px">Lipa kontra<br><em>bez lipy.</em></h2>
+      </div>
+      <p class="lead rv">Znasz to? Karnet, szafka, „powodzenia”. Po trzech miesiącach nie wiesz, czy coś się zmieniło. U nas tak nie będzie.</p>
+    </div>
+    <div class="vs-grid rv">
+      <div class="vs-col vs-lipa">
+        <h3>Lipa</h3>
+        <ul>
+          <li>Karnet, klucz do szafki i&nbsp;„radź sobie”.</li>
+          <li>„−10 kg w&nbsp;miesiąc!” Jasne. Na pewno.</li>
+          <li>Kolejka do ławki o&nbsp;18:00.</li>
+          <li>Trener, który w&nbsp;przerwie patrzy w&nbsp;telefon.</li>
+          <li>Postępy oceniane „na oko” i&nbsp;w&nbsp;lustrze.</li>
+        </ul>
+      </div>
+      <div class="vs-col vs-bez">
+        <h3><span class="logo"><span class="b">bez</span> <span class="l">Lipy</span></span></h3>
+        <ul>
+          <li>Konsultacja i&nbsp;testy, zanim podniesiesz pierwszy ciężar.</li>
+          <li>Realny cel: w&nbsp;liczbach i&nbsp;z&nbsp;terminem.</li>
+          <li>Sala tylko dla Ciebie i&nbsp;trenera. Max 3 osoby.</li>
+          <li>Trener patrzy na Twoją technikę. Tylko na nią.</li>
+          <li>Pomiar co 6 tygodni i&nbsp;raport: było → jest → co dalej.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="sec method" id="metoda">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow rv"><span class="dot"></span>Metoda bez Lipy</div>
+        <h2 class="rv" style="margin-top:18px">4 kroki.<br><em>Zawsze w tej kolejności.</em></h2>
+      </div>
+      <p class="lead rv">Nie zaczynamy od „to dziś klatka”. Zaczynamy od tego, gdzie jesteś i&nbsp;dokąd chcesz dojść.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div class="num">01</div><h3>Test</h3><p>60 minut: wywiad zdrowotny, testy ruchowe (mobilność, siła, postawa) i&nbsp;skład ciała. Wiesz, od czego startujesz.</p><span class="tag">Punkt zero</span></div>
+      <div class="step rv"><div class="num">02</div><h3>Plan</h3><p>Cel w&nbsp;liczbach i&nbsp;z&nbsp;terminem. Np. +20&nbsp;kg w&nbsp;martwym ciągu, −4&nbsp;cm w&nbsp;pasie, plecy bez bólu przy biurku. W&nbsp;12 tygodni.</p><span class="tag">Czarno na białym</span></div>
+      <div class="step rv"><div class="num">03</div><h3>Trening</h3><p>1:1 albo w&nbsp;duecie. Każdy trening zapisany, każdy ciężar policzony. Trener koryguje technikę na bieżąco.</p><span class="tag">Robota</span></div>
+      <div class="step rv"><div class="num">04</div><h3>Pomiar</h3><p>Re-test co 6 tygodni. Dostajesz raport: było → jest → co dalej. Pokażesz go komu chcesz.</p><span class="tag">Dowód</span></div>
+    </div>
+    <div class="arrow rv">↻ &nbsp;Po pomiarze wracamy do kroku 02. <b>Plan rośnie razem z&nbsp;Tobą.</b></div>
+  </div>
+</section>
+
+<!-- FOR WHO -->
+<section class="sec forwho">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow rv"><span class="dot"></span>Dla kogo</div>
+        <h2 class="rv" style="margin-top:18px">Dla dorosłych,<br><em>którzy nie mają czasu na zgadywanie.</em></h2>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card rv"><div class="hex"><svg viewBox="0 0 24 24"><path d="M12 2v20M8 6h8M7 10h10M8 14h8M9 18h6"/></svg></div><h3>Plecy bez bólu</h3><p>Siedzisz 8 godzin dziennie? Wzmacniamy to, co trzyma Cię w&nbsp;pionie: krok po kroku, bez wciskania w&nbsp;ćwiczenia, które bolą.</p></div>
+      <div class="card rv"><div class="hex"><svg viewBox="0 0 24 24"><path d="M3 12h2M19 12h2M5 8v8M19 8v8M8 10v4M16 10v4M8 12h8"/></svg></div><h3>Siła na lata</h3><p>40, 50, 60+. Silne nogi, mocny chwyt i&nbsp;sprawność, która przyda się przy wnukach, w&nbsp;górach i&nbsp;na schodach.</p></div>
+      <div class="card rv"><div class="hex"><svg viewBox="0 0 24 24"><path d="M4 12h16M12 4v16" transform="rotate(45 12 12)"/><circle cx="12" cy="12" r="8"/></svg></div><h3>Mniej w&nbsp;pasie</h3><p>Redukcja oparta na pomiarach, nie na cudach. Mierzymy obwody i&nbsp;skład ciała, więc wiesz, co naprawdę spada.</p></div>
+      <div class="card rv"><div class="hex"><svg viewBox="0 0 24 24"><circle cx="12" cy="6" r="3"/><path d="M12 9v6M8 21l4-6 4 6M7 13h10"/></svg></div><h3>Powrót po ciąży</h3><p>Spokojny, mądry powrót do siły. Najpierw fundamenty i&nbsp;oddech, potem obciążenie.</p></div>
+      <div class="card rv"><div class="hex"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><h3>EMS · krótko i&nbsp;konkretnie</h3><p>Trening z&nbsp;elektrostymulacją mięśni, zawsze pod okiem trenera. Dla zabieganych i&nbsp;dla tych, którzy wracają po przerwie.</p></div>
+      <div class="card rv"><div class="hex"><svg viewBox="0 0 24 24"><path d="M3 17c3 0 3-6 6-6s3 6 6 6 3-10 6-10"/></svg></div><h3>Kondycja</h3><p>Wioślarz Concept2, narciarz, rower, bieżnia i&nbsp;sanki na 10-metrowym torze. Zadyszka pod kontrolą, wyniki na ekranie.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STUDIO -->
+<section class="sec studio" id="studio">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow rv"><span class="dot"></span>Studio</div>
+        <h2 class="rv" style="margin-top:18px">66 m²<br><em>bez zbędnego metra.</em></h2>
+      </div>
+      <p class="lead rv">Każdy sprzęt ma tu swoje miejsce i&nbsp;swój powód. Wchodzisz, przebierasz się, trenujesz, bierzesz prysznic. Nikt nie gapi się zza bieżni.</p>
+    </div>
+    <div class="gallery">
+      <figure class="g1 rv"><img src="img/sala.webp" alt="Główna sala z torem do sanek i rackami" loading="lazy"><figcaption>Sala główna<span>Tor sanek, racki, cardio pod jednym heksagonalnym sufitem</span></figcaption></figure>
+      <figure class="g2 rv"><img src="img/wiatrolap.webp" alt="Wiatrołap z widokiem na ogródek" loading="lazy"><figcaption>Wejście<span>Prosto z ogródka</span></figcaption></figure>
+      <figure class="g3 rv"><img src="img/recepcja.webp" alt="Kącik recepcji trenera" loading="lazy"><figcaption>Mini recepcja<span>Konsultacje i raporty</span></figcaption></figure>
+      <figure class="g4 rv"><img src="img/brama.webp" alt="Brama z dwoma wyciągami i rackiem" loading="lazy"><figcaption>Brama z wyciągami<span>2 × 100 kg stosu</span></figcaption></figure>
+      <figure class="g5 rv"><img src="img/racki.webp" alt="Dwa racki ścienne ze sztangami i ławkami" loading="lazy"><figcaption>Strefa siły<span>Podwójny rack ścienny</span></figcaption></figure>
+      <figure class="g6 rv"><img src="img/ems.webp" alt="Strefa EMS z kamizelką i tabletem" loading="lazy"><figcaption>Strefa EMS<span>Stanowisko mobilne</span></figcaption></figure>
+      <figure class="g7 rv"><img src="img/cardio.webp" alt="Cardio: wioślarz, rower, narciarz, bieżnia" loading="lazy"><figcaption>Cardio</figcaption></figure>
+      <figure class="g8 rv"><img src="img/hantle.webp" alt="Stojak z hantlami od 2 do 20 kg" loading="lazy"><figcaption>Hantle 2–20 kg</figcaption></figure>
+      <figure class="g9 rv"><img src="img/szatnia.webp" alt="Szatnia z szafą i ławką" loading="lazy"><figcaption>Szatnia</figcaption></figure>
+      <figure class="g10 rv"><img src="img/prysznic.webp" alt="Łazienka z prysznicem" loading="lazy"><figcaption>Prysznic</figcaption></figure>
+    </div>
+    <p class="note">Wizualizacje projektu wnętrza. Studio w&nbsp;przygotowaniu.</p>
+
+    <div class="kit">
+      <div class="rv">
+        <h3>Sprzęt dobrany pod robotę, nie pod zdjęcia.</h3>
+        <p>Mało maszyn, dużo możliwości. Wszystko, czego potrzebujesz do siły, kondycji i&nbsp;zdrowych pleców.</p>
+      </div>
+      <div class="chips rv">
+        <span class="chip"><b>2×</b> rack ścienny</span>
+        <span class="chip">Brama z&nbsp;wyciągami <b>2 × 100 kg</b></span>
+        <span class="chip"><b>3</b> ławki regulowane</span>
+        <span class="chip"><b>332 kg</b> talerzy olimpijskich</span>
+        <span class="chip">Hantle <b>2–20 kg</b></span>
+        <span class="chip">Concept2 RowErg</span>
+        <span class="chip">Narciarz</span>
+        <span class="chip">Rower</span>
+        <span class="chip">Bieżnia</span>
+        <span class="chip">Sanki + lina <b>10 m</b></span>
+        <span class="chip">System <b>EMS</b></span>
+        <span class="chip">Analiza składu ciała</span>
+      </div>
+    </div>
+
+    <div class="plan">
+      <div class="plan-head rv">
+        <div>
+          <div class="eyebrow"><span class="dot"></span>Układ studia</div>
+          <h3>Od drzwi do pierwszej serii: <em>30 sekund.</em></h3>
+        </div>
+        <p>Ok. 66&nbsp;m² wewnątrz i&nbsp;dwa ogródki. Każda strefa ma swoje miejsce, więc nikt nikomu nie wchodzi w&nbsp;drogę.</p>
+      </div>
+      <div class="plan-scroll rv" tabindex="0" aria-label="Schemat układu studia, można przewijać w poziomie">
+        <svg class="plan-svg" viewBox="0 0 1040 300" role="img" aria-labelledby="planTitle">
+          <title id="planTitle">Schemat studia bez Lipy: ogródek z wejściem, wiatrołap, szatnia, recepcja, łazienka, tor sanek, strefa siły, cardio, EMS i drugi ogródek</title>
+          <defs>
+            <pattern id="grass" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#1d2620"/><path d="M0 10 L10 0" stroke="#26332a" stroke-width="2"/></pattern>
+            <pattern id="track" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#2b2b2e"/><path d="M0 14 L14 0" stroke="#353538" stroke-width="3"/></pattern>
+          </defs>
+          <!-- gardens -->
+          <rect x="10" y="30" width="250" height="240" rx="6" fill="url(#grass)"/>
+          <text x="135" y="140" class="pl-lbl g" text-anchor="middle">OGRÓDEK</text><text x="135" y="160" class="pl-sub" text-anchor="middle">43 m² · wejście</text>
+          <rect x="790" y="30" width="240" height="240" rx="6" fill="url(#grass)"/>
+          <text x="910" y="140" class="pl-lbl g" text-anchor="middle">OGRÓDEK</text><text x="910" y="160" class="pl-sub" text-anchor="middle">32 m²</text>
+          <!-- building -->
+          <rect x="264" y="24" width="522" height="252" rx="4" fill="#161617" stroke="#4a4a4e" stroke-width="10"/>
+          <!-- track -->
+          <rect x="290" y="128" width="470" height="48" fill="url(#track)"/>
+          <line x1="290" y1="128" x2="760" y2="128" stroke="#e01b2f" stroke-width="2"/><line x1="290" y1="176" x2="760" y2="176" stroke="#e01b2f" stroke-width="2"/>
+          <text x="540" y="157" class="pl-lbl" text-anchor="middle">TOR SANEK · 10,8 m</text>
+          <!-- wiatrolap (bottom-left) -->
+          <rect x="270" y="196" width="80" height="74" class="pl-room"/><text x="310" y="232" class="pl-lbl s" text-anchor="middle">WIATROŁAP</text>
+          <!-- szatnia (top-left) -->
+          <rect x="270" y="30" width="80" height="80" class="pl-room"/><text x="310" y="74" class="pl-lbl s" text-anchor="middle">SZATNIA</text>
+          <!-- recepcja -->
+          <rect x="358" y="34" width="54" height="34" class="pl-furn oak"/><text x="385" y="86" class="pl-sub" text-anchor="middle">recepcja</text>
+          <!-- lazienka -->
+          <rect x="430" y="30" width="122" height="74" class="pl-room"/><text x="491" y="66" class="pl-lbl s" text-anchor="middle">ŁAZIENKA</text><text x="491" y="82" class="pl-sub" text-anchor="middle">WC + prysznic</text>
+          <!-- cardio row (top) -->
+          <rect x="562" y="32" width="70" height="34" class="pl-furn"/><text x="597" y="54" class="pl-tiny" text-anchor="middle">bieżnia</text>
+          <rect x="638" y="32" width="26" height="50" class="pl-furn"/><text x="651" y="96" class="pl-tiny" text-anchor="middle">ski</text>
+          <rect x="670" y="32" width="22" height="50" class="pl-furn"/><text x="681" y="96" class="pl-tiny" text-anchor="middle">rower</text>
+          <rect x="698" y="32" width="18" height="40" class="pl-furn"/><text x="707" y="86" class="pl-tiny" text-anchor="middle">C2</text>
+          <!-- EMS -->
+          <rect x="722" y="32" width="58" height="82" class="pl-ems"/><text x="751" y="78" class="pl-lbl s ems" text-anchor="middle">EMS</text>
+          <!-- racks (bottom wall) -->
+          <rect x="362" y="238" width="152" height="32" class="pl-rack"/><text x="438" y="230" class="pl-sub" text-anchor="middle">podwójny rack</text>
+          <rect x="522" y="246" width="48" height="24" class="pl-furn"/><text x="546" y="238" class="pl-tiny" text-anchor="middle">hantle</text>
+          <rect x="580" y="236" width="140" height="34" class="pl-rack"/><text x="650" y="228" class="pl-sub" text-anchor="middle">brama z wyciągami</text>
+          <!-- doors -->
+          <rect x="296" y="268" width="30" height="12" fill="#e01b2f"/><text x="311" y="294" class="pl-tiny r" text-anchor="middle">WEJŚCIE</text>
+          <rect x="781" y="200" width="12" height="30" fill="#4a4a4e"/>
+          <!-- markers -->
+          <g class="pl-mk"><polygon points="0,7 12,0 24,7 24,21 12,28 0,21" transform="translate(230,219)"/><text x="242" y="238">1</text></g>
+          <g class="pl-mk"><polygon points="0,7 12,0 24,7 24,21 12,28 0,21" transform="translate(230,56)"/><text x="242" y="75">2</text></g>
+          <g class="pl-mk"><polygon points="0,7 12,0 24,7 24,21 12,28 0,21" transform="translate(300,138)"/><text x="312" y="157">3</text></g>
+          <g class="pl-mk"><polygon points="0,7 12,0 24,7 24,21 12,28 0,21" transform="translate(726,184)"/><text x="738" y="203">4</text></g>
+          <g class="pl-mk"><polygon points="0,7 12,0 24,7 24,21 12,28 0,21" transform="translate(898,184)"/><text x="910" y="203">5</text></g>
+        </svg>
+      </div>
+      <p class="note plan-note">Schemat poglądowy, bez skali. Wymiary orientacyjne.</p>
+      <ol class="plan-list rv">
+        <li><div><b>Wiatrołap</b><span>Buty zostają przy wejściu. Na sali jest czysto.</span></div></li>
+        <li><div><b>Szatnia i&nbsp;recepcja</b><span>Przebierasz się, a&nbsp;trener ma już Twój plan na ekranie.</span></div></li>
+        <li><div><b>Tor sanek</b><span>10,8&nbsp;m prostej przez całą salę. Najlepsze „cardio”, jakiego nie znasz.</span></div></li>
+        <li><div><b>Siła · cardio · EMS</b><span>Trzy strefy, zero chodzenia w&nbsp;kółko.</span></div></li>
+        <li><div><b>Dwa ogródki</b><span>Ponad 70&nbsp;m² zieleni po obu stronach studia.</span></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- LIPOMETR -->
+<section class="sec quiz">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow rv"><span class="dot"></span>Lipometr</div>
+      <h2 class="rv" style="margin-top:18px">Ile lipy jest w&nbsp;Twoim <em>treningu?</em></h2>
+      <p class="lead rv">Zaznacz, co pasuje. Szczerze, nikt nie patrzy.</p>
+    </div>
+    <div class="rv">
+      <div class="q-list" id="quiz">
+        <label class="q"><input type="checkbox"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><span class="t">Trenuję bez zapisanego planu.</span></label>
+        <label class="q"><input type="checkbox"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><span class="t">Nie wiem, jakie miałem/am wyniki miesiąc temu.</span></label>
+        <label class="q"><input type="checkbox"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><span class="t">Nie pamiętam ostatniego pomiaru składu ciała.</span></label>
+        <label class="q"><input type="checkbox"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><span class="t">Po dniu przy biurku bolą mnie plecy.</span></label>
+        <label class="q"><input type="checkbox"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><span class="t">Karnet jest. Regularności brak.</span></label>
+      </div>
+      <div class="meter" aria-live="polite">
+        <div class="row"><span>Poziom lipy</span><span class="pct" id="pct">0%</span></div>
+        <div class="bar"><i id="barfill"></i></div>
+        <p class="verdict" id="verdict">Zaznacz pierwszą odpowiedź.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="sec pricing" id="cennik">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow rv"><span class="dot"></span>Cennik</div>
+        <h2 class="rv" style="margin-top:18px">Ceny jawne.<br><em>Bez „zadzwoń, to powiemy”.</em></h2>
+      </div>
+      <p class="lead rv">Zaczynasz od konsultacji. Jej koszt odliczamy od pierwszego pakietu.<br><span class="draft">Cennik roboczy, do potwierdzenia</span></p>
+    </div>
+    <div class="prices">
+      <div class="price rv"><span class="lbl">Start</span><h3>Konsultacja z&nbsp;testami</h3><div class="amt">129<small>zł</small></div><div class="per">60 minut · odliczamy od pakietu</div>
+        <ul><li>Wywiad zdrowotny</li><li>Testy ruchowe i&nbsp;postawy</li><li>Skład ciała</li><li>Cel w&nbsp;liczbach</li></ul><a href="#kontakt" class="btn btn-dark">Umów</a></div>
+      <div class="price hot rv"><span class="lbl">Najczęściej wybierany</span><h3>Pakiet 1:1 · 10 treningów</h3><div class="amt">1700<small>zł</small></div><div class="per">170 zł za trening · ważny 8 tygodni</div>
+        <ul><li>Plan i&nbsp;zapis każdego treningu</li><li>Re-test po 6 tygodniach</li><li>Raport: było → jest</li><li>Kontakt z&nbsp;trenerem między treningami</li></ul><a href="#kontakt" class="btn btn-red">Zaczynam</a></div>
+      <div class="price rv"><span class="lbl">We dwoje</span><h3>Duo · 10 treningów</h3><div class="amt">2400<small>zł</small></div><div class="per">120 zł za osobę za trening</div>
+        <ul><li>Partner, przyjaciółka, brat</li><li>Wspólny trening, osobne cele</li><li>Re-test dla obu osób</li></ul><a href="#kontakt" class="btn btn-dark">Umów duo</a></div>
+      <div class="price rv"><span class="lbl">Elastycznie</span><h3>Trening pojedynczy</h3><div class="amt">200<small>zł</small></div><div class="per">1:1 · 60 minut</div>
+        <ul><li>Dla stałych klientów</li><li>Albo jako dokładka do pakietu</li><li>EMS: cena po wyborze systemu</li></ul><a href="#kontakt" class="btn btn-dark">Umów</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="sec team" id="trenerzy">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow rv"><span class="dot"></span>Trenerzy</div>
+        <h2 class="rv" style="margin-top:18px">Ludzie,<br><em>nie awatary.</em></h2>
+      </div>
+      <p class="lead rv">Każdy trener ma tu wypisane kwalifikacje i&nbsp;specjalizację. Wiesz, z&nbsp;kim pracujesz, zanim przyjdziesz.</p>
+    </div>
+    <div class="coaches">
+      <div class="coach rv"><div class="ph"><div class="hx">KU</div><small>[zdjęcie]</small></div><div class="body"><h3>Kamil Uchnast</h3><div class="role">Trener personalny · <span class="fill">[specjalizacja]</span></div><p class="fill">[2–3 zdania: doświadczenie, certyfikaty, z&nbsp;kim najchętniej pracujesz]</p></div></div>
+      <div class="coach rv"><div class="ph"><div class="hx">N</div><small>[zdjęcie]</small></div><div class="body"><h3>Nazar <span class="fill">[nazwisko]</span></h3><div class="role">Trener personalny · <span class="fill">[specjalizacja]</span></div><p class="fill">[2–3 zdania: doświadczenie, certyfikaty, z&nbsp;kim najchętniej pracujesz]</p></div></div>
+      <div class="coach join rv"><h3>Jesteś trenerem bez lipy?</h3><p style="color:var(--muted);margin-bottom:22px">Szukamy ludzi, którzy wolą mierzyć niż obiecywać.</p><a href="#kontakt" class="btn btn-ghost" style="align-self:flex-start">Napisz do nas</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq" id="faq">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow rv"><span class="dot"></span>FAQ</div>
+      <h2 class="rv" style="margin-top:18px">Pytania.<br><em>Odpowiedzi bez lipy.</em></h2>
+    </div>
+    <div class="rv">
+      <details><summary>Nigdy nie ćwiczyłem/am. To dla mnie?</summary><p>Tak. Właśnie dlatego zaczynamy od testów, a&nbsp;nie od ciężarów. Plan dopasowujemy do punktu, w&nbsp;którym jesteś dziś.</p></details>
+      <details><summary>Mam problemy z&nbsp;kręgosłupem. Mogę trenować?</summary><p>W&nbsp;większości przypadków tak, a&nbsp;często właśnie trzeba. Na konsultacji pytamy o&nbsp;diagnozy i&nbsp;zalecenia. Jeśli trzeba, najpierw odsyłamy do fizjoterapeuty. Bez lipy.</p></details>
+      <details><summary>Ile trwa trening?</summary><p>60 minut. Trening EMS jest krótszy, a&nbsp;dokładny czas podamy po wyborze systemu.</p></details>
+      <details><summary>Co zabrać?</summary><p>Strój, czyste buty na zmianę i&nbsp;wodę. Szatnia i&nbsp;prysznic są na miejscu.</p></details>
+      <details><summary>Mogę trenować z&nbsp;partnerem lub przyjaciółką?</summary><p>Tak, w&nbsp;formacie duo. Trenujecie razem, ale każde z&nbsp;Was ma swój plan i&nbsp;swoje pomiary.</p></details>
+      <details><summary>Co, jeśli muszę odwołać trening?</summary><p><span class="fill">[Zasady odwoływania do ustalenia, np. bezpłatnie do 24 h przed treningiem.]</span></p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="kontakt">
+  <div class="wrap">
+    <div class="eyebrow rv"><span class="dot"></span>Kontakt</div>
+    <h2 class="big rv" style="margin-top:22px">Pierwszy krok?<br><em>Bez lipy.</em></h2>
+    <div class="contact-grid">
+      <div class="rv">
+        <p class="lead">Umów konsultację z&nbsp;testami. 60 minut, zero sprzedawania na siłę. Po spotkaniu wiesz, gdzie jesteś i&nbsp;co dalej, nawet jeśli nie zostaniesz.</p>
+        <form class="form" id="form" novalidate>
+          <div class="f-row">
+            <label class="f"><span>Imię</span><input name="imie" autocomplete="given-name" required placeholder="Jak masz na imię?"></label>
+            <label class="f"><span>Telefon</span><input name="tel" type="tel" autocomplete="tel" inputmode="tel" required placeholder="np. 600 000 000"></label>
+          </div>
+          <fieldset class="f">
+            <legend>Twój główny cel</legend>
+            <div class="pills">
+              <label><input type="radio" name="cel" value="plecy" checked><span>Plecy bez bólu</span></label>
+              <label><input type="radio" name="cel" value="sila"><span>Siła</span></label>
+              <label><input type="radio" name="cel" value="redukcja"><span>Mniej w&nbsp;pasie</span></label>
+              <label><input type="radio" name="cel" value="ciaza"><span>Powrót po ciąży</span></label>
+              <label><input type="radio" name="cel" value="ems"><span>EMS</span></label>
+              <label><input type="radio" name="cel" value="inne"><span>Inny</span></label>
+            </div>
+          </fieldset>
+          <label class="f"><span>Kiedy Ci pasuje? <i>(opcjonalnie)</i></span><input name="kiedy" placeholder="np. wtorki rano, po 18:00"></label>
+          <label class="consent"><input type="checkbox" name="zgoda" required><span>Zgadzam się na kontakt w&nbsp;sprawie konsultacji. Dane przetwarzamy zgodnie z&nbsp;<a href="#">polityką prywatności</a>.</span></label>
+          <button class="btn btn-red" type="submit">Oddzwońcie do mnie
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <p class="f-msg" id="fmsg" role="status"></p>
+        </form>
+      </div>
+      <div class="rv contact-side">
+        <div class="entrance"><img src="img/wiatrolap.webp" alt="Wejście do studia od strony ogródka" loading="lazy"></div>
+        <div class="contact-card">
+          <dl>
+            <dt>Adres</dt><dd>Lipa Piotrowska, Wrocław<br><span class="fill">ul. [uzupełnij]</span></dd>
+            <dt>Telefon</dt><dd><a href="#" class="fill">[uzupełnij]</a></dd>
+            <dt>E-mail</dt><dd><a href="#" class="fill">[uzupełnij]</a></dd>
+            <dt>Godziny</dt><dd class="fill">[np. pn–pt 6:30–21:00, sob 8:00–14:00]</dd>
+            <dt>Social</dt><dd class="fill">@bezlipy [do rezerwacji]</dd>
+          </dl>
+          <div class="ctas">
+            <a href="#" class="btn btn-red">Rezerwacja online</a>
+            <a href="#" class="btn btn-ghost">Zadzwoń</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="wrap">
+      <a href="#top" class="logo"><span class="b">bez</span> <span class="l">Lipy</span></a>
+      <nav class="f-links" aria-label="Stopka"><a href="#metoda">Metoda</a><a href="#studio">Studio</a><a href="#cennik">Cennik</a><a href="#faq">FAQ</a><a href="#">Polityka prywatności</a></nav>
+      <span>© 2026 bez Lipy · Studio Treningu Personalnego · Lipa Piotrowska, Wrocław</span>
+    </div>
+  </footer>
+</section>
+
+<a href="#kontakt" class="m-cta" id="mcta">Umów konsultację · 129&nbsp;zł</a>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie"><div><img id="lbimg" alt=""><p id="lbcap"></p></div></div>
+
+<script>
+// NAV
+const nav=document.getElementById('nav'),burger=document.getElementById('burger');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
+burger.onclick=()=>{const o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',o);document.body.classList.toggle('menu-open',o)};
+document.querySelectorAll('#menu a').forEach(a=>a.onclick=()=>{nav.classList.remove('open');document.body.classList.remove('menu-open');burger.setAttribute('aria-expanded',false)});
+
+// REVEAL + COUNTERS
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv:not(.hero .rv)').forEach((el,i)=>{el.style.transitionDelay=(i%4)*70+'ms';io.observe(el)});
+const co=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;co.unobserve(e.target);
+  const el=e.target,to=+el.dataset.count,dec=+(el.dataset.dec||0),unit=el.querySelector('small').outerHTML,t0=performance.now(),d=1400;
+  const f=t=>{const k=Math.min(1,(t-t0)/d),v=to*(1-Math.pow(1-k,3));el.innerHTML=v.toFixed(dec).replace('.',',')+unit;if(k<1)requestAnimationFrame(f)};requestAnimationFrame(f);
+}),{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
+
+// LIPOMETR
+const boxes=[...document.querySelectorAll('#quiz input')],pct=document.getElementById('pct'),bar=document.getElementById('barfill'),ver=document.getElementById('verdict');
+const msgs=['Czysto. Zero lipy. Ale czy masz to na papierze? Sprawdźmy na konsultacji.','Lekka lipa. Jeden test i&nbsp;wiesz, na czym stoisz.','Lipa zaczyna kwitnąć. Czas na plan w&nbsp;liczbach.','Sporo lipy. Najwyższy czas na <a href="#kontakt">konsultację z&nbsp;testami</a>.','Lipa w&nbsp;pełnym rozkwicie. <a href="#kontakt">Umów konsultację</a>, zrobimy porządek.','100% lipy. Dobra wiadomość: od dziś może być 0. <a href="#kontakt">Zaczynamy?</a>'];
+boxes.forEach(b=>b.onchange=()=>{const n=boxes.filter(x=>x.checked).length,p=n*20;pct.textContent=p+'%';bar.style.width=p+'%';ver.innerHTML=msgs[n]});
+
+// FORM (podgląd: bez wysyłki, do podpięcia)
+const form=document.getElementById('form'),fmsg=document.getElementById('fmsg');
+form.addEventListener('submit',e=>{
+  e.preventDefault();let ok=true;
+  const imie=form.imie,tel=form.tel,zg=form.zgoda;
+  [imie,tel].forEach(i=>i.classList.remove('err'));zg.closest('.consent').classList.remove('err');
+  if(!imie.value.trim()){imie.classList.add('err');ok=false}
+  if(tel.value.replace(/\D/g,'').length<9){tel.classList.add('err');ok=false}
+  if(!zg.checked){zg.closest('.consent').classList.add('err');ok=false}
+  if(!ok){fmsg.className='f-msg bad';fmsg.textContent='Uzupełnij imię, telefon (min. 9 cyfr) i zaznacz zgodę.';return}
+  fmsg.className='f-msg ok';fmsg.textContent='Dzięki, '+imie.value.trim()+'! Oddzwonimy w ciągu 24 godzin. Bez lipy.';form.querySelector('button').disabled=true;
+});
+
+// MOBILE CTA
+const mcta=document.getElementById('mcta'),contact=document.getElementById('kontakt');
+const upd=()=>{const past=scrollY>innerHeight*.8,atC=contact.getBoundingClientRect().top<innerHeight;mcta.classList.toggle('show',past&&!atC)};
+addEventListener('scroll',upd,{passive:true});
+
+// LIGHTBOX
+const lb=document.getElementById('lb'),lbimg=document.getElementById('lbimg'),lbcap=document.getElementById('lbcap');
+document.querySelectorAll('.gallery figure').forEach(f=>f.onclick=()=>{const i=f.querySelector('img');lbimg.src=i.src;lbimg.alt=i.alt;lbcap.textContent=i.alt+' · wizualizacja';lb.classList.add('open')});
+lb.onclick=()=>lb.classList.remove('open');addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('open')});
+</script>
+</body>
+</html>
