@@ -260,9 +260,9 @@ section{position:relative}
 .team{background:var(--ink)}
 .coaches{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .coach{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--graphite)}
-.coach .ph{aspect-ratio:4/3;background:radial-gradient(circle at 50% 40%,#2e2e31,#161617);display:grid;place-items:center;position:relative}
-.coach .ph .hx{width:120px;height:120px;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);background:var(--red);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-style:italic;font-size:44px}
-.coach .ph small{position:absolute;bottom:12px;font-size:12px;color:var(--muted)}
+.coach .ph{height:260px;background:radial-gradient(circle at 50% 45%,#2e2e31,#161617);display:flex;align-items:center;justify-content:center;position:relative}
+.coach .ph .hx{flex:none;width:120px;height:120px;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);background:var(--red);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-style:italic;font-size:44px}
+.coach .ph small{position:absolute;left:0;right:0;text-align:center;bottom:12px;font-size:12px;color:var(--muted)}
 .coach .body{padding:26px}
 .coach h3{font-size:22px;font-style:italic}
 .coach .role{color:var(--red);font-weight:600;font-size:14px;margin:6px 0 14px;letter-spacing:.04em}
@@ -327,7 +327,7 @@ footer .logo{font-size:30px}
 .form .btn{justify-self:start}
 .f-msg{font-size:15px;min-height:1px}
 .f-msg.ok{color:#8fe3a5}.f-msg.bad{color:#ff8a96}
-@media(max-width:560px){.f-row{grid-template-columns:1fr}.form .btn{justify-self:stretch;justify-content:center;white-space:nowrap;padding:18px 16px;font-size:14px}.coach .ph{aspect-ratio:16/9}.contact-card .ctas{flex-direction:column}.contact-card .ctas .btn{justify-content:center}.contact-card dl{grid-template-columns:84px 1fr}.contact .entrance{height:220px}.coach .ph .hx{width:96px;height:96px;font-size:36px}}
+@media(max-width:560px){.f-row{grid-template-columns:1fr}.form .btn{justify-self:stretch;justify-content:center;white-space:nowrap;padding:18px 16px;font-size:14px}.coach .ph{height:200px}.contact-card .ctas{flex-direction:column}.contact-card .ctas .btn{justify-content:center}.contact-card dl{grid-template-columns:84px 1fr}.contact .entrance{height:220px}.coach .ph .hx{width:96px;height:96px;font-size:36px}}
 .f-links{display:flex;gap:22px;flex-wrap:wrap}
 .f-links a{text-decoration:none;color:var(--muted)}.f-links a:hover{color:#fff}
 .m-cta{display:none}
@@ -652,8 +652,8 @@ footer .logo{font-size:30px}
       <p class="lead rv">Każdy trener ma tu wypisane kwalifikacje i&nbsp;specjalizację. Wiesz, z&nbsp;kim pracujesz, zanim przyjdziesz.</p>
     </div>
     <div class="coaches">
-      <div class="coach rv"><div class="ph"><div class="hx">KU</div><small>[zdjęcie]</small></div><div class="body"><h3>Kamil Uchnast</h3><div class="role">Trener personalny · <span class="fill">[specjalizacja]</span></div><p class="fill">[2–3 zdania: doświadczenie, certyfikaty, z&nbsp;kim najchętniej pracujesz]</p></div></div>
-      <div class="coach rv"><div class="ph"><div class="hx">N</div><small>[zdjęcie]</small></div><div class="body"><h3>Nazar <span class="fill">[nazwisko]</span></h3><div class="role">Trener personalny · <span class="fill">[specjalizacja]</span></div><p class="fill">[2–3 zdania: doświadczenie, certyfikaty, z&nbsp;kim najchętniej pracujesz]</p></div></div>
+      <div class="coach rv"><div class="ph"><div class="hx">?</div><small>[zdjęcie]</small></div><div class="body"><h3 class="fill">[Imię i nazwisko]</h3><div class="role">Trener personalny · <span class="fill">[specjalizacja]</span></div><p class="fill">[2–3 zdania: doświadczenie, certyfikaty, z&nbsp;kim najchętniej pracuje]</p></div></div>
+      <div class="coach rv"><div class="ph"><div class="hx">ND</div><small>[zdjęcie]</small></div><div class="body"><h3>Nazar Datsyshyn</h3><div class="role">Trener personalny · <span class="fill">[specjalizacja]</span></div><p class="fill">[2–3 zdania: doświadczenie, certyfikaty, z&nbsp;kim najchętniej pracuje]</p></div></div>
       <div class="coach join rv"><h3>Jesteś trenerem bez lipy?</h3><p style="color:var(--muted);margin-bottom:22px">Szukamy ludzi, którzy wolą mierzyć niż obiecywać.</p><a href="#kontakt" class="btn btn-ghost" style="align-self:flex-start">Napisz do nas</a></div>
     </div>
   </div>
