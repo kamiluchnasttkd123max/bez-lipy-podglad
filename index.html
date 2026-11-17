@@ -13,7 +13,7 @@
 <meta property="og:locale" content="pl_PL">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='25,5 75,5 100,50 75,95 25,95 0,50' fill='%23e01b2f'/%3E%3Ctext x='50' y='66' font-family='Arial' font-weight='900' font-style='italic' font-size='46' fill='white' text-anchor='middle'%3EbL%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ExerciseGym","name":"bez Lipy · Studio Treningu Personalnego","description":"Prywatne studio treningu personalnego. Testy, plan, trening 1:1 i duo, pomiary co 6 tygodni.","address":{"@type":"PostalAddress","addressLocality":"Wrocław","addressRegion":"dolnośląskie","addressCountry":"PL","streetAddress":"[uzupełnij]"},"areaServed":["Wrocław","Lipa Piotrowska","Psie Pole","Kiełczów","Długołęka","Zakrzów"],"priceRange":"129–200 zł"}
+{"@context":"https://schema.org","@type":"ExerciseGym","name":"bez Lipy · Studio Treningu Personalnego","description":"Prywatne studio treningu personalnego. Testy, plan, trening 1:1 i duo, pomiary co 6 tygodni.","address":{"@type":"PostalAddress","addressLocality":"Wrocław","addressRegion":"dolnośląskie","addressCountry":"PL","streetAddress":"[uzupełnij]"},"areaServed":["Wrocław","Lipa Piotrowska","Psie Pole","Kiełczów","Długołęka","Zakrzów"],"priceRange":"$$"}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -252,6 +252,24 @@ section{position:relative}
 .price li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:10px;background:var(--red);clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
 .price .btn{justify-content:center;padding:14px 18px;font-size:13px}
 .price .btn-dark{background:var(--ink);color:#fff}.price .btn-dark:hover{background:var(--red)}
+.amt.soon{font-size:30px;color:var(--muted-dark);letter-spacing:-.02em;padding:8px 0}
+.price.hot .amt.soon{color:#fff}
+.ems{margin-top:60px;display:grid;grid-template-columns:1fr 1.15fr;gap:0;border-radius:6px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.35)}
+.ems-intro{background:var(--graphite);color:#fff;padding:clamp(28px,4vw,46px)}
+.ems-intro .lbl{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:12px;color:var(--red)}
+.ems-intro h3{font-size:clamp(28px,3vw,40px);font-style:italic;margin:10px 0 16px}
+.ems-intro p{color:#cfc9c2;font-size:16px}
+.ems-intro .ems-note{font-size:14px;color:var(--muted);margin-top:14px}
+.ems-table{background:#fff;padding:clamp(20px,3vw,34px) clamp(22px,3.4vw,40px)}
+.ems-row{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 0;border-bottom:1px solid #e6e1db}
+.ems-row b{display:block;font-family:var(--display);font-weight:800;font-size:17px}
+.ems-row span{font-size:14px;color:var(--muted-dark)}
+.ems-p{font-family:var(--display);font-weight:900;font-style:italic;font-size:26px;white-space:nowrap;letter-spacing:-.02em}
+.ems-row.best{background:linear-gradient(90deg,rgba(224,27,47,.08),transparent);margin:0 -14px;padding:18px 14px;border-radius:4px}
+.ems-row.best .ems-p{color:var(--red)}
+.ems-row.first .ems-p{color:var(--red)}
+.ems-foot{font-size:13px;color:var(--muted-dark);margin-top:16px}
+@media(max-width:900px){.ems{grid-template-columns:1fr}}
 .draft{display:inline-block;background:#fff3c4;color:#6b5300;font-size:12px;font-weight:600;padding:5px 10px;border-radius:4px;margin-top:22px}
 @media(max-width:1000px){.prices{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.prices{grid-template-columns:1fr}}
@@ -260,7 +278,12 @@ section{position:relative}
 .team{background:var(--ink)}
 .coaches{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .coach{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--graphite)}
-.coach .ph{height:260px;background:radial-gradient(circle at 50% 45%,#2e2e31,#161617);display:flex;align-items:center;justify-content:center;position:relative}
+.coach .ph{aspect-ratio:4/5;background:#161617;position:relative;overflow:hidden}
+.coach .ph img{width:100%;height:100%;object-fit:cover;object-position:center 20%;transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .4s;filter:saturate(.9)}
+.coach:hover .ph img{transform:scale(1.04);filter:saturate(1)}
+.coach .ph::after{content:"";position:absolute;inset:auto 0 0 0;height:30%;background:linear-gradient(transparent,rgba(28,28,30,.9))}
+.tags{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tags li{font-size:13px;border:1px solid var(--line);border-radius:100px;padding:5px 12px;color:#d9d4ce}
 .coach .ph .hx{flex:none;width:120px;height:120px;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);background:var(--red);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-style:italic;font-size:44px}
 .coach .ph small{position:absolute;left:0;right:0;text-align:center;bottom:12px;font-size:12px;color:var(--muted)}
 .coach .body{padding:26px}
@@ -270,6 +293,22 @@ section{position:relative}
 .coach.join{border-style:dashed;display:flex;flex-direction:column;justify-content:center;padding:34px;background:transparent}
 .coach.join h3{margin-bottom:12px}
 @media(max-width:900px){.coaches{grid-template-columns:1fr}}
+
+/* REVIEWS */
+.reviews{background:var(--concrete-2);color:var(--ink)}
+.reviews .eyebrow,.reviews .lead{color:var(--muted-dark)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.quote{background:#fff;border-radius:6px;padding:34px 30px;display:flex;flex-direction:column;gap:20px;position:relative;overflow:hidden}
+.quote::before{content:"”";position:absolute;right:18px;top:-30px;font-family:var(--display);font-weight:900;font-size:180px;color:rgba(224,27,47,.08);line-height:1}
+.stars{color:var(--red);letter-spacing:4px;font-size:18px}
+.quote blockquote{font-family:var(--display);font-weight:700;font-style:italic;font-size:20px;line-height:1.35;flex:1}
+.quote figcaption b{display:block;font-size:16px}
+.quote figcaption span{font-size:13px;color:var(--muted-dark)}
+.quote-cta{background:var(--graphite);color:#fff}
+.quote-cta blockquote{font-weight:600;color:#d9d4ce}
+.quote-cta::before{color:rgba(224,27,47,.18)}
+.quote-cta .btn{justify-content:center;font-size:13px;padding:15px 18px}
+@media(max-width:900px){.quotes{grid-template-columns:1fr}}
 
 /* FAQ */
 .faq{background:var(--graphite)}
@@ -327,7 +366,7 @@ footer .logo{font-size:30px}
 .form .btn{justify-self:start}
 .f-msg{font-size:15px;min-height:1px}
 .f-msg.ok{color:#8fe3a5}.f-msg.bad{color:#ff8a96}
-@media(max-width:560px){.f-row{grid-template-columns:1fr}.form .btn{justify-self:stretch;justify-content:center;white-space:nowrap;padding:18px 16px;font-size:14px}.coach .ph{height:200px}.contact-card .ctas{flex-direction:column}.contact-card .ctas .btn{justify-content:center}.contact-card dl{grid-template-columns:84px 1fr}.contact .entrance{height:220px}.coach .ph .hx{width:96px;height:96px;font-size:36px}}
+@media(max-width:560px){.f-row{grid-template-columns:1fr}.form .btn{justify-self:stretch;justify-content:center;white-space:nowrap;padding:18px 16px;font-size:14px}.coach .ph{aspect-ratio:1/1}.contact-card .ctas{flex-direction:column}.contact-card .ctas .btn{justify-content:center}.contact-card dl{grid-template-columns:84px 1fr}.contact .entrance{height:220px}}
 .f-links{display:flex;gap:22px;flex-wrap:wrap}
 .f-links a{text-decoration:none;color:var(--muted)}.f-links a:hover{color:#fff}
 .m-cta{display:none}
@@ -364,6 +403,7 @@ footer .logo{font-size:30px}
       <li><a href="#studio">Studio</a></li>
       <li><a href="#cennik">Cennik</a></li>
       <li><a href="#trenerzy">Trenerzy</a></li>
+      <li><a href="#opinie">Opinie</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#kontakt" class="btn btn-red">Umów konsultację</a></li>
     </ul>
@@ -522,6 +562,7 @@ footer .logo{font-size:30px}
         <span class="chip">Sanki + lina <b>10 m</b></span>
         <span class="chip">System <b>EMS</b></span>
         <span class="chip">Analiza składu ciała</span>
+        <span class="chip">Ogródek treningowy <b>32 m²</b></span>
       </div>
     </div>
 
@@ -531,7 +572,7 @@ footer .logo{font-size:30px}
           <div class="eyebrow"><span class="dot"></span>Układ studia</div>
           <h3>Od drzwi do pierwszej serii: <em>30 sekund.</em></h3>
         </div>
-        <p>Ok. 66&nbsp;m² wewnątrz i&nbsp;dwa ogródki. Każda strefa ma swoje miejsce, więc nikt nikomu nie wchodzi w&nbsp;drogę.</p>
+        <p>Ok. 66&nbsp;m² wewnątrz i&nbsp;własny ogródek treningowy. Każda strefa ma swoje miejsce, więc nikt nikomu nie wchodzi w&nbsp;drogę.</p>
       </div>
       <div class="plan-scroll rv" tabindex="0" aria-label="Schemat układu studia, można przewijać w poziomie">
         <svg class="plan-svg" viewBox="0 0 1040 300" role="img" aria-labelledby="planTitle">
@@ -544,7 +585,7 @@ footer .logo{font-size:30px}
           <rect x="10" y="30" width="250" height="240" rx="6" fill="url(#grass)"/>
           <text x="135" y="140" class="pl-lbl g" text-anchor="middle">OGRÓDEK</text><text x="135" y="160" class="pl-sub" text-anchor="middle">43 m² · wejście</text>
           <rect x="790" y="30" width="240" height="240" rx="6" fill="url(#grass)"/>
-          <text x="910" y="140" class="pl-lbl g" text-anchor="middle">OGRÓDEK</text><text x="910" y="160" class="pl-sub" text-anchor="middle">32 m²</text>
+          <text x="910" y="132" class="pl-lbl g" text-anchor="middle">OGRÓDEK</text><text x="910" y="150" class="pl-lbl g" text-anchor="middle">TRENINGOWY</text><text x="910" y="170" class="pl-sub" text-anchor="middle">32 m² · trening outdoor</text>
           <!-- building -->
           <rect x="264" y="24" width="522" height="252" rx="4" fill="#161617" stroke="#4a4a4e" stroke-width="10"/>
           <!-- track -->
@@ -587,7 +628,7 @@ footer .logo{font-size:30px}
         <li><div><b>Szatnia i&nbsp;recepcja</b><span>Przebierasz się, a&nbsp;trener ma już Twój plan na ekranie.</span></div></li>
         <li><div><b>Tor sanek</b><span>10,8&nbsp;m prostej przez całą salę. Najlepsze „cardio”, jakiego nie znasz.</span></div></li>
         <li><div><b>Siła · cardio · EMS</b><span>Trzy strefy, zero chodzenia w&nbsp;kółko.</span></div></li>
-        <li><div><b>Dwa ogródki</b><span>Ponad 70&nbsp;m² zieleni po obu stronach studia.</span></div></li>
+        <li><div><b>Ogródek treningowy</b><span>Ok. 32&nbsp;m² na tyłach studia do treningu na świeżym powietrzu. Właśnie go rozbudowujemy.</span></div></li>
       </ol>
     </div>
   </div>
@@ -626,17 +667,35 @@ footer .logo{font-size:30px}
         <div class="eyebrow rv"><span class="dot"></span>Cennik</div>
         <h2 class="rv" style="margin-top:18px">Ceny jawne.<br><em>Bez „zadzwoń, to powiemy”.</em></h2>
       </div>
-      <p class="lead rv">Zaczynasz od konsultacji. Jej koszt odliczamy od pierwszego pakietu.<br><span class="draft">Cennik roboczy, do potwierdzenia</span></p>
+      <p class="lead rv">Pełny cennik opublikujemy przed otwarciem. Zawsze zaczynasz od konsultacji, której koszt odliczamy od pierwszego pakietu.</p>
     </div>
     <div class="prices">
-      <div class="price rv"><span class="lbl">Start</span><h3>Konsultacja z&nbsp;testami</h3><div class="amt">129<small>zł</small></div><div class="per">60 minut · odliczamy od pakietu</div>
-        <ul><li>Wywiad zdrowotny</li><li>Testy ruchowe i&nbsp;postawy</li><li>Skład ciała</li><li>Cel w&nbsp;liczbach</li></ul><a href="#kontakt" class="btn btn-dark">Umów</a></div>
-      <div class="price hot rv"><span class="lbl">Najczęściej wybierany</span><h3>Pakiet 1:1 · 10 treningów</h3><div class="amt">1700<small>zł</small></div><div class="per">170 zł za trening · ważny 8 tygodni</div>
-        <ul><li>Plan i&nbsp;zapis każdego treningu</li><li>Re-test po 6 tygodniach</li><li>Raport: było → jest</li><li>Kontakt z&nbsp;trenerem między treningami</li></ul><a href="#kontakt" class="btn btn-red">Zaczynam</a></div>
-      <div class="price rv"><span class="lbl">We dwoje</span><h3>Duo · 10 treningów</h3><div class="amt">2400<small>zł</small></div><div class="per">120 zł za osobę za trening</div>
-        <ul><li>Partner, przyjaciółka, brat</li><li>Wspólny trening, osobne cele</li><li>Re-test dla obu osób</li></ul><a href="#kontakt" class="btn btn-dark">Umów duo</a></div>
-      <div class="price rv"><span class="lbl">Elastycznie</span><h3>Trening pojedynczy</h3><div class="amt">200<small>zł</small></div><div class="per">1:1 · 60 minut</div>
-        <ul><li>Dla stałych klientów</li><li>Albo jako dokładka do pakietu</li><li>EMS: cena po wyborze systemu</li></ul><a href="#kontakt" class="btn btn-dark">Umów</a></div>
+      <div class="price rv"><span class="lbl">Start</span><h3>Konsultacja z&nbsp;testami</h3><div class="amt soon">Wkrótce</div><div class="per">60 minut · odliczamy od pakietu</div>
+        <ul><li>Wywiad zdrowotny</li><li>Testy ruchowe i&nbsp;postawy</li><li>Skład ciała</li><li>Cel w&nbsp;liczbach</li></ul><a href="#kontakt" class="btn btn-dark">Zapisz się</a></div>
+      <div class="price hot rv"><span class="lbl">Najczęściej wybierany</span><h3>Pakiet 1:1</h3><div class="amt soon">Wkrótce</div><div class="per">Pakiety 5 i&nbsp;10 treningów</div>
+        <ul><li>Plan i&nbsp;zapis każdego treningu</li><li>Re-test co 6 tygodni</li><li>Raport: było → jest</li><li>Kontakt z&nbsp;trenerem między treningami</li></ul><a href="#kontakt" class="btn btn-red">Daj znać przed startem</a></div>
+      <div class="price rv"><span class="lbl">We dwoje</span><h3>Duo</h3><div class="amt soon">Wkrótce</div><div class="per">Taniej za osobę</div>
+        <ul><li>Partner, przyjaciółka, brat</li><li>Wspólny trening, osobne cele</li><li>Re-test dla obu osób</li></ul><a href="#kontakt" class="btn btn-dark">Zapisz się</a></div>
+      <div class="price rv"><span class="lbl">Elastycznie</span><h3>Trening pojedynczy</h3><div class="amt soon">Wkrótce</div><div class="per">1:1 · 60 minut</div>
+        <ul><li>Dla stałych klientów</li><li>Albo jako dokładka do pakietu</li></ul><a href="#kontakt" class="btn btn-dark">Zapisz się</a></div>
+    </div>
+
+    <div class="ems" id="ems">
+      <div class="ems-intro rv">
+        <span class="lbl">Osobny cennik</span>
+        <h3>Trening EMS</h3>
+        <p>Elektrostymulacja mięśni w&nbsp;kamizelce, zawsze 1:1 i&nbsp;pod okiem trenera. Krótko, intensywnie, bez dźwigania ciężarów. Dobry wybór dla zabieganych i&nbsp;tych, którzy wracają po przerwie.</p>
+        <p class="ems-note">Przed pierwszym treningiem EMS pytamy o&nbsp;przeciwwskazania (np. ciąża, rozrusznik serca, padaczka).</p>
+        <span class="draft">Propozycja cen, do potwierdzenia</span>
+      </div>
+      <div class="ems-table rv">
+        <div class="ems-row first"><div><b>Pierwszy trening EMS</b><span>z&nbsp;omówieniem i&nbsp;dopasowaniem kamizelki</span></div><div class="ems-p">79&nbsp;zł</div></div>
+        <div class="ems-row"><div><b>Trening pojedynczy</b><span>ok. 25 minut</span></div><div class="ems-p">129&nbsp;zł</div></div>
+        <div class="ems-row"><div><b>Pakiet 4 treningi</b><span>110&nbsp;zł za trening · ważny 5 tygodni</span></div><div class="ems-p">440&nbsp;zł</div></div>
+        <div class="ems-row best"><div><b>Pakiet 8 treningów</b><span>100&nbsp;zł za trening · ważny 10 tygodni</span></div><div class="ems-p">800&nbsp;zł</div></div>
+        <div class="ems-row"><div><b>Pakiet 12 treningów</b><span>90&nbsp;zł za trening · ważny 14 tygodni</span></div><div class="ems-p">1080&nbsp;zł</div></div>
+        <p class="ems-foot">Bielizna treningowa do EMS w&nbsp;cenie.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -649,12 +708,52 @@ footer .logo{font-size:30px}
         <div class="eyebrow rv"><span class="dot"></span>Trenerzy</div>
         <h2 class="rv" style="margin-top:18px">Ludzie,<br><em>nie awatary.</em></h2>
       </div>
-      <p class="lead rv">Każdy trener ma tu wypisane kwalifikacje i&nbsp;specjalizację. Wiesz, z&nbsp;kim pracujesz, zanim przyjdziesz.</p>
+      <p class="lead rv">Każdy trener ma tu wypisaną specjalizację. Wiesz, z&nbsp;kim pracujesz, zanim przyjdziesz.</p>
     </div>
     <div class="coaches">
-      <div class="coach rv"><div class="ph"><div class="hx">?</div><small>[zdjęcie]</small></div><div class="body"><h3 class="fill">[Imię i nazwisko]</h3><div class="role">Trener personalny · <span class="fill">[specjalizacja]</span></div><p class="fill">[2–3 zdania: doświadczenie, certyfikaty, z&nbsp;kim najchętniej pracuje]</p></div></div>
-      <div class="coach rv"><div class="ph"><div class="hx">ND</div><small>[zdjęcie]</small></div><div class="body"><h3>Nazar Datsyshyn</h3><div class="role">Trener personalny · <span class="fill">[specjalizacja]</span></div><p class="fill">[2–3 zdania: doświadczenie, certyfikaty, z&nbsp;kim najchętniej pracuje]</p></div></div>
+      <div class="coach rv">
+        <div class="ph"><img src="img/ola.jpg" alt="Ola Charęza, trenerka personalna bez Lipy" loading="lazy"></div>
+        <div class="body"><h3>Ola Charęza</h3><div class="role">Trenerka personalna · fitness kobiet</div>
+          <p>Specjalizuje się w&nbsp;treningu brzucha, ud i&nbsp;pośladków. Pomoże Ci wzmocnić ciało i&nbsp;wrócić do formy w&nbsp;bezpiecznym tempie.</p>
+          <ul class="tags"><li>Brzuch · uda · pośladki</li><li>Trening funkcjonalny</li></ul></div>
+      </div>
+      <div class="coach rv">
+        <div class="ph"><img src="img/nazar.jpg" alt="Nazar Datsyshyn, trener personalny bez Lipy" loading="lazy"></div>
+        <div class="body"><h3>Nazar Datsyshyn</h3><div class="role">Trener personalny · siła i&nbsp;kondycja</div>
+          <p>Trener CrossFitu i&nbsp;Hyrox. Pilnuje techniki w&nbsp;każdym powtórzeniu i&nbsp;dba o&nbsp;to, żeby trening się nie nudził.</p>
+          <ul class="tags"><li>Siła</li><li>CrossFit</li><li>Hyrox</li></ul></div>
+      </div>
       <div class="coach join rv"><h3>Jesteś trenerem bez lipy?</h3><p style="color:var(--muted);margin-bottom:22px">Szukamy ludzi, którzy wolą mierzyć niż obiecywać.</p><a href="#kontakt" class="btn btn-ghost" style="align-self:flex-start">Napisz do nas</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- OPINIE -->
+<section class="sec reviews" id="opinie">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow rv"><span class="dot"></span>Opinie</div>
+        <h2 class="rv" style="margin-top:18px">Nie wierz nam.<br><em>Wierz podopiecznym.</em></h2>
+      </div>
+      <p class="lead rv">Prawdziwe opinie z&nbsp;Google o&nbsp;treningach personalnych z&nbsp;naszymi trenerami. Zero dopisanych gwiazdek.</p>
+    </div>
+    <div class="quotes">
+      <figure class="quote rv">
+        <div class="stars" aria-label="5 na 5 gwiazdek">★★★★★</div>
+        <blockquote>„Zdecydowanie polecam treningi indywidualne z&nbsp;Nazarem. Pełen profesjonalizm, świetne podejście.”</blockquote>
+        <figcaption><b>Leszek Patrzek</b><span>Opinia z&nbsp;Google · treningi z&nbsp;Nazarem</span></figcaption>
+      </figure>
+      <figure class="quote rv">
+        <div class="stars" aria-label="5 na 5 gwiazdek">★★★★★</div>
+        <blockquote>„Jeśli chodzi o&nbsp;treningi personalne, polecam zajęcia z&nbsp;Nazarem. Świetny trener!”</blockquote>
+        <figcaption><b>Asia O.</b><span>Fragment opinii z&nbsp;Google · treningi z&nbsp;Nazarem</span></figcaption>
+      </figure>
+      <figure class="quote quote-cta rv">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <blockquote>Tu będzie Twoja opinia. Po pierwszym re-teście, kiedy zobaczysz swoje liczby.</blockquote>
+        <a href="#kontakt" class="btn btn-red">Zacznij od konsultacji</a>
+      </figure>
     </div>
   </div>
 </section>
@@ -669,7 +768,8 @@ footer .logo{font-size:30px}
     <div class="rv">
       <details><summary>Nigdy nie ćwiczyłem/am. To dla mnie?</summary><p>Tak. Właśnie dlatego zaczynamy od testów, a&nbsp;nie od ciężarów. Plan dopasowujemy do punktu, w&nbsp;którym jesteś dziś.</p></details>
       <details><summary>Mam problemy z&nbsp;kręgosłupem. Mogę trenować?</summary><p>W&nbsp;większości przypadków tak, a&nbsp;często właśnie trzeba. Na konsultacji pytamy o&nbsp;diagnozy i&nbsp;zalecenia. Jeśli trzeba, najpierw odsyłamy do fizjoterapeuty. Bez lipy.</p></details>
-      <details><summary>Ile trwa trening?</summary><p>60 minut. Trening EMS jest krótszy, a&nbsp;dokładny czas podamy po wyborze systemu.</p></details>
+      <details><summary>Ile trwa trening?</summary><p>Trening personalny trwa 60 minut, a&nbsp;trening EMS ok. 25 minut.</p></details>
+      <details><summary>Czy trenujecie na zewnątrz?</summary><p>Tak. Na tyłach studia mamy własny ogródek treningowy, w&nbsp;którym trenujemy w&nbsp;sezonie, i&nbsp;stale go rozbudowujemy.</p></details>
       <details><summary>Co zabrać?</summary><p>Strój, czyste buty na zmianę i&nbsp;wodę. Szatnia i&nbsp;prysznic są na miejscu.</p></details>
       <details><summary>Mogę trenować z&nbsp;partnerem lub przyjaciółką?</summary><p>Tak, w&nbsp;formacie duo. Trenujecie razem, ale każde z&nbsp;Was ma swój plan i&nbsp;swoje pomiary.</p></details>
       <details><summary>Co, jeśli muszę odwołać trening?</summary><p><span class="fill">[Zasady odwoływania do ustalenia, np. bezpłatnie do 24 h przed treningiem.]</span></p></details>
@@ -735,7 +835,7 @@ footer .logo{font-size:30px}
   </footer>
 </section>
 
-<a href="#kontakt" class="m-cta" id="mcta">Umów konsultację · 129&nbsp;zł</a>
+<a href="#kontakt" class="m-cta" id="mcta">Umów konsultację</a>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie"><div><img id="lbimg" alt=""><p id="lbcap"></p></div></div>
 
