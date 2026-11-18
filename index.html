@@ -310,6 +310,30 @@ section{position:relative}
 
 /* TEAM */
 .team{background:var(--ink)}
+.nazar{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--graphite)}
+.nz-ph{position:relative;min-height:100%;background:#161617}
+.nz-ph img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;min-height:420px}
+.nz-ph::after{content:"";position:absolute;inset:auto 0 0 0;height:40%;background:linear-gradient(transparent,rgba(18,18,19,.85))}
+.nz-badge{position:absolute;left:22px;bottom:22px;z-index:1;background:var(--red);color:#fff;padding:10px 16px;border-radius:4px;line-height:1.15}
+.nz-badge span{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.1em;opacity:.85}
+.nz-badge b{font-family:var(--display);font-style:italic;font-weight:900;font-size:18px}
+.nz-body{padding:clamp(28px,3.4vw,48px)}
+.nazar h3{font-size:clamp(24px,2.2vw,30px);font-style:italic}
+.nazar .role{color:var(--red);font-weight:600;font-size:14px;margin:6px 0 22px;letter-spacing:.04em}
+.nz-quote{font-family:var(--display);font-weight:800;font-style:italic;font-size:clamp(21px,2vw,27px);line-height:1.25;letter-spacing:-.01em;margin:0 0 18px;padding-left:18px;border-left:4px solid var(--red)}
+.nz-quote em{color:var(--red)}
+.nz-body>p{color:var(--muted);font-size:16px}
+.nz-facts{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:24px 0 6px}
+.nz-facts li{background:var(--ink);border:1px solid var(--line);border-radius:6px;padding:14px 14px 16px;font-weight:600;font-size:15px;line-height:1.35}
+.nz-facts span{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.nz-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:26px}
+.nz-rev{color:var(--text);font-size:14px;text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px}
+.nz-rev b{color:#f5b301;letter-spacing:.06em;margin-right:6px}
+.coach-join{margin-top:20px;border:1px dashed var(--line);border-radius:6px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.coach-join h3{font-size:19px;font-style:italic;margin-bottom:4px}.coach-join p{color:var(--muted);font-size:15px}
+@media(max-width:960px){.nazar{grid-template-columns:1fr}.nz-ph img{min-height:0;aspect-ratio:1/1}.nz-facts{grid-template-columns:1fr}}
+@media(max-width:560px){.coach-join{flex-direction:column;align-items:flex-start}.nz-ctas .btn{width:100%;justify-content:center;text-align:center}}
+
 .coaches{display:grid;grid-template-columns:repeat(2,minmax(0,380px));gap:20px}
 .coach{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--graphite)}
 .coach .ph{aspect-ratio:4/5;background:#161617;position:relative;overflow:hidden}
@@ -437,10 +461,10 @@ footer .logo{font-size:30px}
     <a href="#top" class="logo" aria-label="bez Lipy, strona główna"><span class="b">bez</span> <span class="l">Lipy</span></a>
     <ul id="menu">
       <li><a href="#metoda">Metoda</a></li>
+      <li><a href="#trenerzy">Trener</a></li>
+      <li><a href="#opinie">Opinie</a></li>
       <li><a href="#studio">Studio</a></li>
       <li><a href="#cennik">Cennik</a></li>
-      <li><a href="#trenerzy">Trenerzy</a></li>
-      <li><a href="#opinie">Opinie</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#kontakt" class="btn btn-red">Zapisz się</a></li>
     </ul>
@@ -559,6 +583,72 @@ footer .logo{font-size:30px}
       <div class="vibe-i rv"><h3>Zero komentarzy o&nbsp;wyglądzie</h3><p>Rozmawiamy o&nbsp;tym, co potrafisz i&nbsp;jak się czujesz. Nie o&nbsp;tym, jak wyglądasz, ile ważysz ani w&nbsp;co się ubrałaś czy ubrałeś.</p></div>
       <div class="vibe-i rv"><h3>Twoje tempo, Twoja muzyka</h3><p>Masz gorszy dzień? Zmieniamy plan, nie robimy wyrzutów. Chcesz swojej playlisty albo ciszy? Mów śmiało.</p></div>
       <div class="vibe-i rv"><h3>Możesz przyjść z&nbsp;kimś</h3><p>Na pierwsze spotkanie możesz wziąć przyjaciółkę, partnera albo mamę. Raźniej się zaczyna, a&nbsp;potem możecie trenować w&nbsp;duecie.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="sec team" id="trenerzy">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow rv"><span class="dot"></span>Twój trener</div>
+        <h2 class="rv" style="margin-top:18px">Poznaj trenera,<br><em>zanim przyjdziesz.</em></h2>
+      </div>
+      <p class="lead rv">Najtrudniejszy jest pierwszy krok przez drzwi. Łatwiej go zrobić, kiedy wiesz, kto będzie po drugiej stronie.</p>
+    </div>
+    <article class="nazar rv">
+      <div class="nz-ph">
+        <img src="img/nazar.jpg" alt="Nazar Datsyshyn, trener personalny bez Lipy" loading="lazy">
+        <div class="nz-badge"><span>Twój trener</span><b>od pierwszego dnia</b></div>
+      </div>
+      <div class="nz-body">
+        <h3>Nazar Datsyshyn</h3>
+        <div class="role">Trener personalny · siła, kondycja, start od zera</div>
+        <blockquote class="nz-quote">„Nie musisz być w&nbsp;formie, żeby zacząć. <em>Od tego jestem ja.</em>”</blockquote>
+        <p>Na pierwszym treningu nie sprawdzam, ile podniesiesz. Sprawdzam, jak się czujesz i&nbsp;co lubisz. Tłumaczę każde ćwiczenie, zanim je zrobisz, pilnuję techniki, a&nbsp;tempo dobieram do Ciebie. A&nbsp;jeśli kiedyś zamarzy Ci się start w&nbsp;zawodach Hyrox, też Cię do niego przygotuję.</p>
+        <ul class="nz-facts">
+          <li><span>Pierwsze pytanie na treningu</span>„Jak się dziś czujesz?”</li>
+          <li><span>Czego nigdy nie powie</span>„No dawaj, to przecież lekkie.”</li>
+          <li><span>Co słyszysz po pierwszym treningu</span>„Widzisz? Dało się.”</li>
+        </ul>
+        <ul class="tags"><li>Start od zera</li><li>Siła</li><li>Kondycja</li><li>Technika</li><li>Hyrox</li></ul>
+        <div class="nz-ctas">
+          <a href="#kontakt" class="btn btn-red">Umów pierwszy trening z&nbsp;Nazarem</a>
+          <a href="#opinie" class="nz-rev"><b>★★★★★</b> Co mówią podopieczni</a>
+        </div>
+      </div>
+    </article>
+    <div class="coach-join rv"><div><h3>Jesteś trenerem bez lipy?</h3><p>Szukamy ludzi, którzy wolą tłumaczyć niż krzyczeć i&nbsp;mierzyć niż obiecywać.</p></div><a href="#kontakt" class="btn btn-ghost">Napisz do nas</a></div>
+  </div>
+</section>
+
+<!-- OPINIE -->
+<section class="sec reviews" id="opinie">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow rv"><span class="dot"></span>Opinie</div>
+        <h2 class="rv" style="margin-top:18px">Nie wierz nam.<br><em>Wierz podopiecznym.</em></h2>
+      </div>
+      <p class="lead rv">Prawdziwe opinie z&nbsp;Google o&nbsp;treningach personalnych z&nbsp;Nazarem. Zero dopisanych gwiazdek.</p>
+    </div>
+    <div class="quotes">
+      <figure class="quote rv">
+        <div class="stars" aria-label="5 na 5 gwiazdek">★★★★★</div>
+        <blockquote>„Zdecydowanie polecam treningi indywidualne z&nbsp;Nazarem. Pełen profesjonalizm, świetne podejście.”</blockquote>
+        <figcaption><b>Leszek Patrzek</b><span>Opinia z&nbsp;Google · treningi z&nbsp;Nazarem</span></figcaption>
+      </figure>
+      <figure class="quote rv">
+        <div class="stars" aria-label="5 na 5 gwiazdek">★★★★★</div>
+        <blockquote>„Jeśli chodzi o&nbsp;treningi personalne, polecam zajęcia z&nbsp;Nazarem. Świetny trener!”</blockquote>
+        <figcaption><b>Asia O.</b><span>Fragment opinii z&nbsp;Google · treningi z&nbsp;Nazarem</span></figcaption>
+      </figure>
+      <figure class="quote quote-cta rv">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <blockquote>Tu będzie Twoja opinia. Po pierwszych tygodniach, kiedy poczujesz różnicę.</blockquote>
+        <a href="#kontakt" class="btn btn-red">Zapisz się przed otwarciem</a>
+      </figure>
     </div>
   </div>
 </section>
@@ -735,59 +825,6 @@ footer .logo{font-size:30px}
         <div class="ems-row best"><div><b>Pakiety treningów EMS</b><span>im więcej treningów, tym niższa cena za jeden</span></div><div class="ems-p soon">Wkrótce</div></div>
         <p class="ems-foot">Cennik EMS opublikujemy przed otwarciem, razem z&nbsp;cennikiem treningów personalnych.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- TEAM -->
-<section class="sec team" id="trenerzy">
-  <div class="wrap">
-    <div class="sec-head">
-      <div>
-        <div class="eyebrow rv"><span class="dot"></span>Trenerzy</div>
-        <h2 class="rv" style="margin-top:18px">Ludzie,<br><em>nie awatary.</em></h2>
-      </div>
-      <p class="lead rv">Każdy trener ma tu wypisaną specjalizację. Wiesz, z&nbsp;kim pracujesz, zanim przyjdziesz.</p>
-    </div>
-    <div class="coaches">
-      <!-- Ola Charęza: tymczasowo ukryta -->
-      <div class="coach rv">
-        <div class="ph"><img src="img/nazar.jpg" alt="Nazar Datsyshyn, trener personalny bez Lipy" loading="lazy"></div>
-        <div class="body"><h3>Nazar Datsyshyn</h3><div class="role">Trener personalny · siła i&nbsp;kondycja</div>
-          <p>Trener CrossFitu i&nbsp;Hyrox. Pilnuje techniki w&nbsp;każdym powtórzeniu i&nbsp;dba o&nbsp;to, żeby trening się nie nudził.</p>
-          <ul class="tags"><li>Siła</li><li>CrossFit</li><li>Hyrox</li></ul></div>
-      </div>
-      <div class="coach join rv"><h3>Jesteś trenerem bez lipy?</h3><p style="color:var(--muted);margin-bottom:22px">Szukamy ludzi, którzy wolą mierzyć niż obiecywać.</p><a href="#kontakt" class="btn btn-ghost" style="align-self:flex-start">Napisz do nas</a></div>
-    </div>
-  </div>
-</section>
-
-<!-- OPINIE -->
-<section class="sec reviews" id="opinie">
-  <div class="wrap">
-    <div class="sec-head">
-      <div>
-        <div class="eyebrow rv"><span class="dot"></span>Opinie</div>
-        <h2 class="rv" style="margin-top:18px">Nie wierz nam.<br><em>Wierz podopiecznym.</em></h2>
-      </div>
-      <p class="lead rv">Prawdziwe opinie z&nbsp;Google o&nbsp;treningach personalnych z&nbsp;Nazarem. Zero dopisanych gwiazdek.</p>
-    </div>
-    <div class="quotes">
-      <figure class="quote rv">
-        <div class="stars" aria-label="5 na 5 gwiazdek">★★★★★</div>
-        <blockquote>„Zdecydowanie polecam treningi indywidualne z&nbsp;Nazarem. Pełen profesjonalizm, świetne podejście.”</blockquote>
-        <figcaption><b>Leszek Patrzek</b><span>Opinia z&nbsp;Google · treningi z&nbsp;Nazarem</span></figcaption>
-      </figure>
-      <figure class="quote rv">
-        <div class="stars" aria-label="5 na 5 gwiazdek">★★★★★</div>
-        <blockquote>„Jeśli chodzi o&nbsp;treningi personalne, polecam zajęcia z&nbsp;Nazarem. Świetny trener!”</blockquote>
-        <figcaption><b>Asia O.</b><span>Fragment opinii z&nbsp;Google · treningi z&nbsp;Nazarem</span></figcaption>
-      </figure>
-      <figure class="quote quote-cta rv">
-        <div class="stars" aria-hidden="true">★★★★★</div>
-        <blockquote>Tu będzie Twoja opinia. Po pierwszych tygodniach, kiedy poczujesz różnicę.</blockquote>
-        <a href="#kontakt" class="btn btn-red">Zapisz się przed otwarciem</a>
-      </figure>
     </div>
   </div>
 </section>
