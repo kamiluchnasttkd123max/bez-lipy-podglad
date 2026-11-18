@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>bez Lipy · Studio Treningu Personalnego · Wrocław</title>
-<meta name="description" content="Kameralne studio treningu personalnego na Lipie Piotrowskiej we Wrocławiu. Testujemy, planujemy, mierzymy. Trening bez lipy.">
+<meta name="description" content="Kameralne studio treningu personalnego na Lipie Piotrowskiej we Wrocławiu. Także dla osób, które zaczynają od zera. Trener obok Ciebie, Twoje tempo, bez tłumu i bez oceniania.">
 <meta name="theme-color" content="#121213">
 <meta property="og:site_name" content="bez Lipy">
 <meta property="og:title" content="Trening bez lipy. Kameralne studio treningu personalnego · Wrocław">
-<meta property="og:description" content="Testujemy, planujemy, mierzymy. Sala tylko dla Ciebie i trenera, plan w liczbach i pomiar co 6 tygodni. Lipa Piotrowska, Wrocław.">
+<meta property="og:description" content="Trening bez lipy. Także od zera. Kameralne studio treningu personalnego na Lipie Piotrowskiej we Wrocławiu: trener obok Ciebie, Twoje tempo, postępy, które widać.">
 <meta property="og:image" content="https://treningbezlipy.pl/img/og-bez-lipy-v2.jpg">
 <meta property="og:image:secure_url" content="https://treningbezlipy.pl/img/og-bez-lipy-v2.jpg">
 <meta property="og:image:type" content="image/jpeg">
@@ -127,6 +127,23 @@ section{position:relative}
 .sec-head .lead{max-width:44ch}
 
 /* LIPA VS */
+.promises{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.promise{background:var(--paper);border-radius:6px;padding:clamp(26px,2.6vw,36px);box-shadow:0 24px 50px -34px rgba(0,0,0,.35)}
+.promise .pn{font-family:var(--display);font-weight:900;font-style:italic;color:var(--red);font-size:15px;letter-spacing:.04em;margin-bottom:18px}
+.promise h3{font-size:clamp(19px,1.6vw,22px);font-style:italic;line-height:1.2;margin-bottom:12px}
+.promise p{color:var(--muted-dark);font-size:16px}
+@media(max-width:1000px){.promises{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.promises{grid-template-columns:1fr}}
+.hero-status{display:flex;align-items:center;gap:10px;margin-top:26px;font-size:14px;color:var(--muted)}
+.hero-status .dot{width:8px;height:8px;background:var(--red);clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+.vibe{background:var(--graphite)}
+.vibes{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.vibe-i{background:var(--graphite);padding:clamp(26px,2.6vw,36px)}
+.vibe-i h3{font-size:clamp(19px,1.6vw,22px);font-style:italic;line-height:1.2;margin-bottom:12px;padding-top:18px;border-top:3px solid var(--red);display:inline-block}
+.vibe-i p{color:var(--muted);font-size:16px}
+@media(max-width:1000px){.vibes{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.vibes{grid-template-columns:1fr}}
+.nw{white-space:nowrap}
 .versus{background:var(--concrete-2);color:var(--ink)}
 .versus .eyebrow{color:var(--muted-dark)}
 .versus .lead{color:var(--muted-dark)}
@@ -222,7 +239,7 @@ section{position:relative}
 @media(max-width:560px){.plan-list{grid-template-columns:1fr;gap:4px}.plan-list li{display:grid;grid-template-columns:44px 1fr;padding:16px 0;border-top-width:1px}.plan-list li::before{margin:0}}
 @media(max-width:900px){.kit{grid-template-columns:1fr;gap:36px}}
 
-/* LIPOMETR */
+/* DOBIERZ TRENING */
 .quiz{background:var(--red);color:#fff;overflow:hidden}
 .quiz::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(120deg,transparent 0 60px,rgba(255,255,255,.04) 60px 62px)}
 .quiz .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
@@ -240,10 +257,12 @@ section{position:relative}
 .q input:focus-visible ~ .box{outline:3px solid var(--ink);outline-offset:2px}
 .meter{margin-top:26px;background:var(--ink);border-radius:6px;padding:24px 24px 22px}
 .meter .row{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:13px;color:var(--muted)}
-.meter .pct{font-size:36px;font-style:italic;font-weight:900;color:#fff;letter-spacing:-.03em}
 .bar{height:10px;background:#333;border-radius:10px;margin:12px 0 16px;overflow:hidden}
 .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#f2b8bf,var(--red));border-radius:10px;transition:width .6s cubic-bezier(.2,.8,.2,1)}
-.verdict{color:#e7e2dc;font-size:16px;min-height:52px}
+.verdict{color:#e7e2dc;font-size:16px;min-height:52px;margin-top:12px}
+.verdict ul{list-style:none;display:grid;gap:10px;margin-bottom:14px}
+.verdict li{padding-left:22px;position:relative}.verdict li::before{content:"";position:absolute;left:0;top:.6em;width:10px;height:10px;background:var(--red);clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+.verdict b{color:#fff}
 .verdict a{color:#fff;font-weight:600}
 @media(max-width:900px){.quiz .wrap{grid-template-columns:1fr;gap:40px}}
 
@@ -423,7 +442,7 @@ footer .logo{font-size:30px}
       <li><a href="#trenerzy">Trenerzy</a></li>
       <li><a href="#opinie">Opinie</a></li>
       <li><a href="#faq">FAQ</a></li>
-      <li><a href="#kontakt" class="btn btn-red">Umów konsultację</a></li>
+      <li><a href="#kontakt" class="btn btn-red">Zapisz się</a></li>
     </ul>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
@@ -434,13 +453,14 @@ footer .logo{font-size:30px}
   <div class="hero-img"><img src="img/sala.webp" alt="Sala treningowa bez Lipy z sufitem z heksagonów LED, rackami i torem do sanek"></div>
   <div class="wrap">
     <div class="eyebrow rv"><span class="dot"></span><span class="hide-m">Studio treningu personalnego · </span>Lipa Piotrowska · Wrocław</div>
-    <h1 class="rv">Trening<br><em>bez lipy.</em></h1>
-    <p class="lead rv">Kameralne studio, w którym trenujesz tylko z&nbsp;trenerem. Testujemy, planujemy, mierzymy. Bez tłumu, bez ściemy, bez zgadywania.</p>
+    <h1 class="rv">Trening <span class="nw">bez lipy.</span><br><em>Także od zera.</em></h1>
+    <p class="lead rv">Pierwszy raz, powrót po przerwie czy kolejny krok? W&nbsp;kameralnym studiu trener jest obok Ciebie przez cały trening i&nbsp;dopasowuje wszystko do Twojego tempa. Bez tłumu i&nbsp;bez oceniania.</p>
     <div class="ctas rv">
-      <a href="#kontakt" class="btn btn-red">Umów konsultację
+      <a href="#kontakt" class="btn btn-red">Zapisz się przed otwarciem
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a href="#studio" class="btn btn-ghost">Zobacz studio</a>
+      <a href="#trenerzy" class="btn btn-ghost">Poznaj trenera</a>
     </div>
+    <p class="hero-status rv"><span class="dot"></span>Otwieramy już wkrótce. Zapisani dowiedzą się pierwsi.</p>
   </div>
   <div class="scroll-hint">Przewiń</div>
 </header>
@@ -448,8 +468,8 @@ footer .logo{font-size:30px}
 <!-- TICKER -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track">
-    <span>Zero ściemy</span><span>Zero tłumu</span><span>Zero zgadywania</span><span>Plan na papierze</span><span>Wyniki w liczbach</span><span>Tylko z trenerem</span>
-    <span>Zero ściemy</span><span>Zero tłumu</span><span>Zero zgadywania</span><span>Plan na papierze</span><span>Wyniki w liczbach</span><span>Tylko z trenerem</span>
+    <span>Także od zera</span><span>Twoje tempo</span><span>Trener obok Ciebie</span><span>Bez tłumu</span><span>Bez oceniania</span><span>Postęp, który widać</span>
+    <span>Także od zera</span><span>Twoje tempo</span><span>Trener obok Ciebie</span><span>Bez tłumu</span><span>Bez oceniania</span><span>Postęp, który widać</span>
   </div>
 </div>
 
@@ -457,43 +477,27 @@ footer .logo{font-size:30px}
 <section class="stats">
   <div class="wrap grid">
     <div class="stat rv"><div class="n" data-count="66">0<small>m²</small></div><p>tylko pod trening z&nbsp;trenerem. Żadnego „open gymu”.</p></div>
-    <div class="stat rv"><div class="n" data-count="3">0<small>os.</small></div><p>maksymalnie na sali jednocześnie. Zero kolejek do sprzętu.</p></div>
-    <div class="stat rv"><div class="n" data-count="6">0<small>tyg.</small></div><p>i&nbsp;robimy re-test. Postęp widzisz w&nbsp;liczbach, nie „na oko”.</p></div>
+    <div class="stat rv"><div class="n" data-count="3">0<small>os.</small></div><p>trenujące maksymalnie naraz, zawsze pod okiem trenera. Nigdy tłum, zero kolejek do sprzętu.</p></div>
+    <div class="stat rv"><div class="n" data-count="6">0<small>tyg.</small></div><p>i&nbsp;razem sprawdzamy, co się zmieniło. Postęp widać nie tylko w&nbsp;lustrze.</p></div>
     <div class="stat rv"><div class="n" data-count="10.8" data-dec="1">0<small>m</small></div><p>toru do pchania sanek. Bo kondycja to nie tylko bieżnia.</p></div>
   </div>
 </section>
 
-<!-- LIPA VS BEZ LIPY -->
+<!-- OBIETNICE -->
 <section class="sec versus">
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <div class="eyebrow rv"><span class="dot"></span>Różnica</div>
-        <h2 class="rv" style="margin-top:18px">Lipa kontra<br><em>bez lipy.</em></h2>
+        <div class="eyebrow rv"><span class="dot"></span>Jak u&nbsp;nas jest</div>
+        <h2 class="rv" style="margin-top:18px">Bez oceniania.<br><em>Bez lipy.</em></h2>
       </div>
-      <p class="lead rv">Znasz to? Karnet, szafka, „powodzenia”. Po trzech miesiącach nie wiesz, czy coś się zmieniło. U nas tak nie będzie.</p>
+      <p class="lead rv">Nie musisz najpierw „wyrobić formy”, żeby do nas przyjść. Od tego jesteśmy my.</p>
     </div>
-    <div class="vs-grid rv">
-      <div class="vs-col vs-lipa">
-        <h3>Lipa</h3>
-        <ul>
-          <li>Karnet, klucz do szafki i&nbsp;„radź sobie”.</li>
-          <li>„−10 kg w&nbsp;miesiąc!” Jasne. Na pewno.</li>
-          <li>Kolejka do ławki o&nbsp;18:00.</li>
-          <li>Trener, który w&nbsp;przerwie patrzy w&nbsp;telefon.</li>
-          <li>Postępy oceniane „na oko” i&nbsp;w&nbsp;lustrze.</li>
-        </ul>
-      </div>
-      <div class="vs-col vs-bez">
-        <h3><span class="logo"><span class="b">bez</span> <span class="l">Lipy</span></span></h3>
-        <ul>
-          <li>Konsultacja i&nbsp;testy, zanim podniesiesz pierwszy ciężar.</li>
-          <li>Realny cel: w&nbsp;liczbach i&nbsp;z&nbsp;terminem.</li>
-          <li>Sala tylko dla Ciebie i&nbsp;trenera. Max 3 osoby.</li>
-          <li>Trener patrzy na Twoją technikę. Tylko na nią.</li>
-          <li>Pomiar co 6 tygodni i&nbsp;raport: było → jest → co dalej.</li>
-        </ul>
-      </div>
+    <div class="promises">
+      <div class="promise rv"><div class="pn">01</div><h3>Trener jest obok Ciebie</h3><p>Przez cały trening. Pokazuje, tłumaczy, poprawia technikę i&nbsp;dobiera ciężar do tego, jak się dziś czujesz.</p></div>
+      <div class="promise rv"><div class="pn">02</div><h3>Zaczynasz ze swojego poziomu</h3><p>Pierwszy raz na treningu, powrót po latach albo po ciąży? Zaczynamy od tego, co dziś jest dla Ciebie wygodne, i&nbsp;dokładamy krok po kroku.</p></div>
+      <div class="promise rv"><div class="pn">03</div><h3>Widzisz, że to działa</h3><p>Razem ustalamy cel: siła, kondycja, zdrowe plecy albo po prostu regularność. Co kilka tygodni sprawdzamy, co się zmieniło.</p></div>
+      <div class="promise rv"><div class="pn">04</div><h3>Kameralnie, bez tłumu</h3><p>Bez kolejek do sprzętu i&nbsp;bez nikogo, kto gapi się zza bieżni. Pytasz o&nbsp;wszystko, nic nie jest „głupim pytaniem”.</p></div>
     </div>
   </div>
 </section>
@@ -504,15 +508,15 @@ footer .logo{font-size:30px}
     <div class="sec-head">
       <div>
         <div class="eyebrow rv"><span class="dot"></span>Metoda bez Lipy</div>
-        <h2 class="rv" style="margin-top:18px">4 kroki.<br><em>Zawsze w tej kolejności.</em></h2>
+        <h2 class="rv" style="margin-top:18px">Pierwsza wizyta<br><em>i&nbsp;co dalej.</em></h2>
       </div>
-      <p class="lead rv">Nie zaczynamy od „to dziś klatka”. Zaczynamy od tego, gdzie jesteś i&nbsp;dokąd chcesz dojść.</p>
+      <p class="lead rv">Nie zaczynamy od ciężarów. Zaczynamy od rozmowy o&nbsp;Tobie: gdzie jesteś dziś i&nbsp;dokąd chcesz dojść.</p>
     </div>
     <div class="steps">
-      <div class="step rv"><div class="num">01</div><h3>Test</h3><p>60 minut: wywiad zdrowotny, testy ruchowe (mobilność, siła, postawa) i&nbsp;skład ciała. Wiesz, od czego startujesz.</p><span class="tag">Punkt zero</span></div>
-      <div class="step rv"><div class="num">02</div><h3>Plan</h3><p>Cel w&nbsp;liczbach i&nbsp;z&nbsp;terminem. Np. +20&nbsp;kg w&nbsp;martwym ciągu, −4&nbsp;cm w&nbsp;pasie, plecy bez bólu przy biurku. W&nbsp;12 tygodni.</p><span class="tag">Czarno na białym</span></div>
-      <div class="step rv"><div class="num">03</div><h3>Trening</h3><p>1:1 albo w&nbsp;duecie. Każdy trening zapisany, każdy ciężar policzony. Trener koryguje technikę na bieżąco.</p><span class="tag">Robota</span></div>
-      <div class="step rv"><div class="num">04</div><h3>Pomiar</h3><p>Re-test co 6 tygodni. Dostajesz raport: było → jest → co dalej. Pokażesz go komu chcesz.</p><span class="tag">Dowód</span></div>
+      <div class="step rv"><div class="num">01</div><h3>Poznajemy się</h3><p>Rozmawiamy o&nbsp;Twoich celach, zdrowiu i&nbsp;doświadczeniu. Sprawdzamy, jak się ruszasz: spokojnie, to nie egzamin. Pomiary ciała tylko, jeśli chcesz.</p><span class="tag">Bez stresu</span></div>
+      <div class="step rv"><div class="num">02</div><h3>Plan</h3><p>Wspólnie ustalamy cel. Może być w&nbsp;liczbach (np. −4&nbsp;cm w&nbsp;pasie, plecy bez bólu przy biurku), a&nbsp;może być prosty: dwa treningi w&nbsp;tygodniu i&nbsp;więcej sił na co dzień.</p><span class="tag">Twój cel</span></div>
+      <div class="step rv"><div class="num">03</div><h3>Trening</h3><p>1:1 albo w&nbsp;duecie. Trener tłumaczy każde ćwiczenie, poprawia technikę i&nbsp;dopasowuje trudność na bieżąco. Każdy trening zapisujemy.</p><span class="tag">Krok po kroku</span></div>
+      <div class="step rv"><div class="num">04</div><h3>Postęp</h3><p>Co 6 tygodni sprawdzamy razem, co się zmieniło: siła, kondycja, samopoczucie, a&nbsp;jeśli chcesz, także pomiary. Dostajesz krótkie podsumowanie: było → jest → co dalej.</p><span class="tag">Widać różnicę</span></div>
     </div>
     <div class="arrow rv">↻ &nbsp;Po pomiarze wracamy do kroku 02. <b>Plan rośnie razem z&nbsp;Tobą.</b></div>
   </div>
@@ -524,16 +528,37 @@ footer .logo{font-size:30px}
     <div class="sec-head">
       <div>
         <div class="eyebrow rv"><span class="dot"></span>Dla kogo</div>
-        <h2 class="rv" style="margin-top:18px">Dla dorosłych,<br><em>którzy nie mają czasu na zgadywanie.</em></h2>
+        <h2 class="rv" style="margin-top:18px">Z&nbsp;czym możesz<br><em>do nas przyjść.</em></h2>
       </div>
     </div>
     <div class="cards">
+      <div class="card rv"><div class="hex"><svg viewBox="0 0 24 24"><path d="M5 19h4v-4h4v-4h4V7h2"/></svg></div><h3>Pierwszy raz na treningu</h3><p>Zero doświadczenia? Idealnie. Uczymy podstawowych ruchów od zera, bez pośpiechu i&nbsp;bez oceniania. Sprzętu nie musisz znać, od tego jest trener.</p></div>
+      <div class="card rv"><div class="hex"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg></div><h3>Siła dla kobiet</h3><p>Mocne ciało, nie tylko szczupłe. Siła, kondycja i&nbsp;pewność siebie na sali, z&nbsp;planem pod Twoje cele, a&nbsp;nie pod czyjś ideał.</p></div>
       <div class="card rv"><div class="hex"><svg viewBox="0 0 24 24"><path d="M12 2v20M8 6h8M7 10h10M8 14h8M9 18h6"/></svg></div><h3>Plecy bez bólu</h3><p>Siedzisz 8 godzin dziennie? Wzmacniamy to, co trzyma Cię w&nbsp;pionie: krok po kroku, bez wciskania w&nbsp;ćwiczenia, które bolą.</p></div>
       <div class="card rv"><div class="hex"><svg viewBox="0 0 24 24"><path d="M3 12h2M19 12h2M5 8v8M19 8v8M8 10v4M16 10v4M8 12h8"/></svg></div><h3>Siła na lata</h3><p>40, 50, 60+. Silne nogi, mocny chwyt i&nbsp;sprawność, która przyda się przy wnukach, w&nbsp;górach i&nbsp;na schodach.</p></div>
-      <div class="card rv"><div class="hex"><svg viewBox="0 0 24 24"><path d="M4 12h16M12 4v16" transform="rotate(45 12 12)"/><circle cx="12" cy="12" r="8"/></svg></div><h3>Mniej w&nbsp;pasie</h3><p>Redukcja oparta na pomiarach, nie na cudach. Mierzymy obwody i&nbsp;skład ciała, więc wiesz, co naprawdę spada.</p></div>
+      <div class="card rv"><div class="hex"><svg viewBox="0 0 24 24"><path d="M4 12h16M12 4v16" transform="rotate(45 12 12)"/><circle cx="12" cy="12" r="8"/></svg></div><h3>Lżej i&nbsp;zdrowiej</h3><p>Redukcja bez cudów i&nbsp;bez głodówek. Postępy sprawdzamy tak, jak Ci wygodnie: obwody, skład ciała albo po prostu to, jak leżą spodnie.</p></div>
       <div class="card rv"><div class="hex"><svg viewBox="0 0 24 24"><circle cx="12" cy="6" r="3"/><path d="M12 9v6M8 21l4-6 4 6M7 13h10"/></svg></div><h3>Powrót po ciąży</h3><p>Spokojny, mądry powrót do siły. Najpierw fundamenty i&nbsp;oddech, potem obciążenie.</p></div>
       <div class="card rv"><div class="hex"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><h3>EMS · krótko i&nbsp;konkretnie</h3><p>Trening z&nbsp;elektrostymulacją mięśni, zawsze pod okiem trenera. Dla zabieganych i&nbsp;dla tych, którzy wracają po przerwie.</p></div>
-      <div class="card rv"><div class="hex"><svg viewBox="0 0 24 24"><path d="M3 17c3 0 3-6 6-6s3 6 6 6 3-10 6-10"/></svg></div><h3>Kondycja</h3><p>Wioślarz Concept2, narciarz, rower, bieżnia i&nbsp;sanki na 10-metrowym torze. Zadyszka pod kontrolą, wyniki na ekranie.</p></div>
+      <div class="card rv"><div class="hex"><svg viewBox="0 0 24 24"><path d="M3 17c3 0 3-6 6-6s3 6 6 6 3-10 6-10"/></svg></div><h3>Kondycja</h3><p>Mniej zadyszki na schodach i&nbsp;więcej energii na co dzień. Wioślarz, rower, bieżnia i&nbsp;tor z&nbsp;sankami, zawsze dobrane do Twojego poziomu.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- KLIMAT -->
+<section class="sec vibe" id="klimat">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow rv"><span class="dot"></span>Klimat studia</div>
+        <h2 class="rv" style="margin-top:18px">Tu się dobrze trenuje.<br><em>Także w&nbsp;gorszy dzień.</em></h2>
+      </div>
+      <p class="lead rv">Sprzęt to połowa sprawy. Druga połowa to to, jak się tu czujesz. Dlatego mamy kilka zasad, których trzymamy się zawsze.</p>
+    </div>
+    <div class="vibes">
+      <div class="vibe-i rv"><h3>Po imieniu, od pierwszego dnia</h3><p>Trener czeka na Ciebie, a&nbsp;nie Ty na niego. Wiesz, z&nbsp;kim trenujesz, i&nbsp;on wie, jak Ci minął tydzień.</p></div>
+      <div class="vibe-i rv"><h3>Zero komentarzy o&nbsp;wyglądzie</h3><p>Rozmawiamy o&nbsp;tym, co potrafisz i&nbsp;jak się czujesz. Nie o&nbsp;tym, jak wyglądasz, ile ważysz ani w&nbsp;co się ubrałaś czy ubrałeś.</p></div>
+      <div class="vibe-i rv"><h3>Twoje tempo, Twoja muzyka</h3><p>Masz gorszy dzień? Zmieniamy plan, nie robimy wyrzutów. Chcesz swojej playlisty albo ciszy? Mów śmiało.</p></div>
+      <div class="vibe-i rv"><h3>Możesz przyjść z&nbsp;kimś</h3><p>Na pierwsze spotkanie możesz wziąć przyjaciółkę, partnera albo mamę. Raźniej się zaczyna, a&nbsp;potem możecie trenować w&nbsp;duecie.</p></div>
     </div>
   </div>
 </section>
@@ -652,26 +677,25 @@ footer .logo{font-size:30px}
   </div>
 </section>
 
-<!-- LIPOMETR -->
+<!-- DOBIERZ TRENING -->
 <section class="sec quiz">
   <div class="wrap">
     <div>
-      <div class="eyebrow rv"><span class="dot"></span>Lipometr</div>
-      <h2 class="rv" style="margin-top:18px">Ile lipy jest w&nbsp;Twoim <em>treningu?</em></h2>
-      <p class="lead rv">Zaznacz, co pasuje. Szczerze, nikt nie patrzy.</p>
+      <div class="eyebrow rv"><span class="dot"></span>Od czego zacząć?</div>
+      <h2 class="rv" style="margin-top:18px">Dobierz trening <em>dla siebie.</em></h2>
+      <p class="lead rv">Zaznacz, co do Ciebie pasuje. Podpowiemy, od czego najlepiej zacząć.</p>
     </div>
     <div class="rv">
       <div class="q-list" id="quiz">
-        <label class="q"><input type="checkbox"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><span class="t">Trenuję bez zapisanego planu.</span></label>
-        <label class="q"><input type="checkbox"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><span class="t">Nie wiem, jakie miałem/am wyniki miesiąc temu.</span></label>
-        <label class="q"><input type="checkbox"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><span class="t">Nie pamiętam ostatniego pomiaru składu ciała.</span></label>
+        <label class="q"><input type="checkbox"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><span class="t">Chcę zacząć się ruszać, ale nie wiem, od czego.</span></label>
+        <label class="q"><input type="checkbox"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><span class="t">Wracam po przerwie, kontuzji albo po ciąży.</span></label>
         <label class="q"><input type="checkbox"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><span class="t">Po dniu przy biurku bolą mnie plecy.</span></label>
-        <label class="q"><input type="checkbox"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><span class="t">Karnet jest. Regularności brak.</span></label>
+        <label class="q"><input type="checkbox"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><span class="t">Chcę mieć więcej siły i&nbsp;lepszą kondycję.</span></label>
+        <label class="q"><input type="checkbox"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><span class="t">Mam naprawdę mało czasu.</span></label>
       </div>
       <div class="meter" aria-live="polite">
-        <div class="row"><span>Poziom lipy</span><span class="pct" id="pct">0%</span></div>
-        <div class="bar"><i id="barfill"></i></div>
-        <p class="verdict" id="verdict">Zaznacz pierwszą odpowiedź.</p>
+        <div class="row"><span>Nasza podpowiedź</span></div>
+        <div class="verdict" id="verdict">Zaznacz przynajmniej jedną odpowiedź.</div>
       </div>
     </div>
   </div>
@@ -683,17 +707,17 @@ footer .logo{font-size:30px}
     <div class="sec-head">
       <div>
         <div class="eyebrow rv"><span class="dot"></span>Cennik</div>
-        <h2 class="rv" style="margin-top:18px">Ceny jawne.<br><em>Bez „zadzwoń, to powiemy”.</em></h2>
+        <h2 class="rv" style="margin-top:18px">Cennik<br><em>przed otwarciem.</em></h2>
       </div>
-      <p class="lead rv">Pełny cennik opublikujemy przed otwarciem. Zawsze zaczynasz od konsultacji, której koszt odliczamy od pierwszego pakietu.</p>
+      <p class="lead rv">Pełny cennik opublikujemy tutaj przed otwarciem. Wszystkie kwoty jawnie, bez „zadzwoń, to powiemy”. Zaczynasz od konsultacji, której koszt odliczamy od pierwszego pakietu.</p>
     </div>
     <div class="prices">
       <div class="price rv"><span class="lbl">Start</span><h3>Konsultacja z&nbsp;testami</h3><div class="amt soon">Wkrótce</div><div class="per">60 minut · odliczamy od pakietu</div>
-        <ul><li>Wywiad zdrowotny</li><li>Testy ruchowe i&nbsp;postawy</li><li>Skład ciała</li><li>Cel w&nbsp;liczbach</li></ul><a href="#kontakt" class="btn btn-dark">Zapisz się</a></div>
-      <div class="price hot rv"><span class="lbl">Najczęściej wybierany</span><h3>Pakiet 1:1</h3><div class="amt soon">Wkrótce</div><div class="per">Pakiety 5 i&nbsp;10 treningów</div>
-        <ul><li>Plan i&nbsp;zapis każdego treningu</li><li>Re-test co 6 tygodni</li><li>Raport: było → jest</li><li>Kontakt z&nbsp;trenerem między treningami</li></ul><a href="#kontakt" class="btn btn-red">Daj znać przed startem</a></div>
+        <ul><li>Rozmowa o&nbsp;celach i&nbsp;zdrowiu</li><li>Spokojne testy ruchowe</li><li>Skład ciała, jeśli chcesz</li><li>Plan pierwszych kroków</li></ul><a href="#kontakt" class="btn btn-dark">Zapisz się</a></div>
+      <div class="price hot rv"><span class="lbl">Trening personalny</span><h3>Pakiet 1:1</h3><div class="amt soon">Wkrótce</div><div class="per">Pakiety 5 i&nbsp;10 treningów</div>
+        <ul><li>Plan i&nbsp;zapis każdego treningu</li><li>Sprawdzanie postępów co 6 tygodni</li><li>Podsumowanie: było → jest</li><li>Kontakt z&nbsp;trenerem między treningami</li></ul><a href="#kontakt" class="btn btn-red">Daj znać przed startem</a></div>
       <div class="price rv"><span class="lbl">We dwoje</span><h3>Duo</h3><div class="amt soon">Wkrótce</div><div class="per">Taniej za osobę</div>
-        <ul><li>Partner, przyjaciółka, brat</li><li>Wspólny trening, osobne cele</li><li>Re-test dla obu osób</li></ul><a href="#kontakt" class="btn btn-dark">Zapisz się</a></div>
+        <ul><li>Partner, przyjaciółka, brat</li><li>Wspólny trening, osobne cele</li><li>Postępy sprawdzane dla obu osób</li></ul><a href="#kontakt" class="btn btn-dark">Zapisz się</a></div>
       <div class="price rv"><span class="lbl">Elastycznie</span><h3>Trening pojedynczy</h3><div class="amt soon">Wkrótce</div><div class="per">1:1 · 60 minut</div>
         <ul><li>Dla stałych klientów</li><li>Albo jako dokładka do pakietu</li></ul><a href="#kontakt" class="btn btn-dark">Zapisz się</a></div>
     </div>
@@ -761,8 +785,8 @@ footer .logo{font-size:30px}
       </figure>
       <figure class="quote quote-cta rv">
         <div class="stars" aria-hidden="true">★★★★★</div>
-        <blockquote>Tu będzie Twoja opinia. Po pierwszym re-teście, kiedy zobaczysz swoje liczby.</blockquote>
-        <a href="#kontakt" class="btn btn-red">Zacznij od konsultacji</a>
+        <blockquote>Tu będzie Twoja opinia. Po pierwszych tygodniach, kiedy poczujesz różnicę.</blockquote>
+        <a href="#kontakt" class="btn btn-red">Zapisz się przed otwarciem</a>
       </figure>
     </div>
   </div>
@@ -776,9 +800,11 @@ footer .logo{font-size:30px}
       <h2 class="rv" style="margin-top:18px">Pytania.<br><em>Odpowiedzi bez lipy.</em></h2>
     </div>
     <div class="rv">
+      <details open><summary>Nigdy nie ćwiczyłem/am. To dla mnie?</summary><p>Tak, i&nbsp;to bardzo. Nie musisz znać sprzętu ani mieć kondycji. Zaczynamy od rozmowy i&nbsp;prostych ruchów, a&nbsp;trener tłumaczy wszystko na bieżąco. Tempo dobieramy do Ciebie.</p></details>
+      <details><summary>Czy muszę się ważyć i&nbsp;mierzyć?</summary><p>Nie. Pomiary pomagają widzieć postępy, ale to Ty decydujesz, co sprawdzamy. Możemy skupić się na sile, kondycji albo po prostu na tym, jak się czujesz.</p></details>
       <details><summary>Kiedy otwieracie?</summary><p>Już niedługo. Kończymy urządzanie studia. Zostaw kontakt w&nbsp;formularzu poniżej albo napisz do nas na Instagramie lub Facebooku, a&nbsp;odezwiemy się z&nbsp;terminem otwarcia przed wszystkimi.</p></details>
       <details><summary>Gdzie dokładnie jesteście?</summary><p>Na Lipie Piotrowskiej we Wrocławiu, kilka minut od Psiego Pola, Zakrzowa i&nbsp;Kiełczowa. Dokładny adres i&nbsp;wskazówki dojazdu podamy przed otwarciem.</p></details>
-      <details><summary>Nigdy nie ćwiczyłem/am. To dla mnie?</summary><p>Tak. Właśnie dlatego zaczynamy od testów, a&nbsp;nie od ciężarów. Plan dopasowujemy do punktu, w&nbsp;którym jesteś dziś.</p></details>
+      
       <details><summary>Mam problemy z&nbsp;kręgosłupem. Mogę trenować?</summary><p>W&nbsp;większości przypadków tak, a&nbsp;często właśnie trzeba. Na konsultacji pytamy o&nbsp;diagnozy i&nbsp;zalecenia. Jeśli trzeba, najpierw odsyłamy do fizjoterapeuty. Bez lipy.</p></details>
       <details><summary>Ile trwa trening?</summary><p>Trening personalny trwa 60 minut, a&nbsp;trening EMS ok. 25 minut.</p></details>
       <details><summary>Czy trenujecie na zewnątrz?</summary><p>Tak. Na tyłach studia mamy własny ogródek treningowy, w&nbsp;którym trenujemy w&nbsp;sezonie, i&nbsp;stale go rozbudowujemy.</p></details>
@@ -796,7 +822,7 @@ footer .logo{font-size:30px}
     <h2 class="big rv" style="margin-top:22px">Pierwszy krok?<br><em>Bez lipy.</em></h2>
     <div class="contact-grid">
       <div class="rv">
-        <p class="lead">Zapisz się na konsultację z&nbsp;testami. 60 minut, zero sprzedawania na siłę. Po spotkaniu wiesz, gdzie jesteś i&nbsp;co dalej, nawet jeśli nie zostaniesz. Przed otwarciem odezwiemy się do Ciebie jako pierwsi.</p>
+        <p class="lead">Zostaw kontakt, a&nbsp;przed otwarciem odezwiemy się do Ciebie jako pierwsi i&nbsp;umówimy spokojną konsultację: rozmowa, proste testy i&nbsp;plan pierwszych kroków. Bez sprzedawania na siłę. Nawet jeśli nie zostaniesz, wyjdziesz z&nbsp;planem.</p>
         <form class="form" id="form" novalidate>
           <div class="f-row">
             <label class="f"><span>Imię</span><input name="imie" autocomplete="given-name" required placeholder="Jak masz na imię?"></label>
@@ -805,9 +831,10 @@ footer .logo{font-size:30px}
           <fieldset class="f">
             <legend>Twój główny cel</legend>
             <div class="pills">
-              <label><input type="radio" name="cel" value="plecy" checked><span>Plecy bez bólu</span></label>
+              <label><input type="radio" name="cel" value="start" checked><span>Start od zera</span></label>
+              <label><input type="radio" name="cel" value="plecy"><span>Plecy bez bólu</span></label>
               <label><input type="radio" name="cel" value="sila"><span>Siła</span></label>
-              <label><input type="radio" name="cel" value="redukcja"><span>Mniej w&nbsp;pasie</span></label>
+              <label><input type="radio" name="cel" value="redukcja"><span>Lżej i&nbsp;zdrowiej</span></label>
               <label><input type="radio" name="cel" value="ciaza"><span>Powrót po ciąży</span></label>
               <label><input type="radio" name="cel" value="ems"><span>EMS</span></label>
               <label><input type="radio" name="cel" value="inne"><span>Inny</span></label>
@@ -848,7 +875,7 @@ footer .logo{font-size:30px}
   </footer>
 </section>
 
-<a href="#kontakt" class="m-cta" id="mcta">Umów konsultację</a>
+<a href="#kontakt" class="m-cta" id="mcta">Zapisz się przed otwarciem</a>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie"><div><img id="lbimg" alt=""><p id="lbcap"></p></div></div>
 
@@ -869,14 +896,14 @@ const co=new IntersectionObserver(es=>es.forEach(e=>{
 }),{threshold:.5});
 document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
 
-// LIPOMETR
-const boxes=[...document.querySelectorAll('#quiz input')],pct=document.getElementById('pct'),bar=document.getElementById('barfill'),ver=document.getElementById('verdict');
-const msgs=['Czysto. Zero lipy. Ale czy masz to na papierze? Sprawdźmy na konsultacji.','Lekka lipa. Jeden test i&nbsp;wiesz, na czym stoisz.','Lipa zaczyna kwitnąć. Czas na plan w&nbsp;liczbach.','Sporo lipy. Najwyższy czas na <a href="#kontakt">konsultację z&nbsp;testami</a>.','Lipa w&nbsp;pełnym rozkwicie. <a href="#kontakt">Umów konsultację</a>, zrobimy porządek.','100% lipy. Dobra wiadomość: od dziś może być 0. <a href="#kontakt">Zaczynamy?</a>'];
-boxes.forEach(b=>b.onchange=()=>{const n=boxes.filter(x=>x.checked).length,p=n*20;pct.textContent=p+'%';bar.style.width=p+'%';ver.innerHTML=msgs[n]});
+// DOBIERZ TRENING
+const boxes=[...document.querySelectorAll('#quiz input')],ver=document.getElementById('verdict');
+const recs=['<b>Spokojny start 1:1.</b> Pierwsze treningi uczą podstawowych ruchów, w&nbsp;Twoim tempie.','<b>Łagodny powrót.</b> Najpierw fundamenty i&nbsp;oddech, potem stopniowo obciążenie.','<b>Zdrowe plecy.</b> Wzmacniamy to, co trzyma Cię w&nbsp;pionie, bez ćwiczeń, które bolą.','<b>Siła i&nbsp;kondycja.</b> Plan pod Twój cel i&nbsp;sprawdzanie postępów co 6 tygodni.','<b>Krótko i&nbsp;konkretnie.</b> EMS (ok. 25 minut) albo zwarte treningi 1:1 w&nbsp;stałych godzinach.'];
+boxes.forEach(b=>b.onchange=()=>{const on=recs.filter((r,i)=>boxes[i].checked);ver.innerHTML=on.length?'<ul>'+on.map(r=>'<li>'+r+'</li>').join('')+'</ul><p>Szczegóły ustalimy razem na pierwszym spotkaniu. <a href="#kontakt">Zapisz się przed otwarciem</a></p>':'Zaznacz przynajmniej jedną odpowiedź.'});
 
 // FORM: gotowa wiadomość e-mail do studia
 const form=document.getElementById('form'),fmsg=document.getElementById('fmsg');
-const celNames={plecy:'Plecy bez bólu',sila:'Siła',redukcja:'Mniej w pasie',ciaza:'Powrót po ciąży',ems:'EMS',inne:'Inny'};
+const celNames={start:'Start od zera',plecy:'Plecy bez bólu',sila:'Siła',redukcja:'Lżej i zdrowiej',ciaza:'Powrót po ciąży',ems:'EMS',inne:'Inny'};
 form.addEventListener('submit',e=>{
   e.preventDefault();let ok=true;
   const imie=form.imie,tel=form.tel,zg=form.zgoda;
